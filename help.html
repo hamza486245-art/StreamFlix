@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Center &amp; Support — StreamFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="login.html" class="btn btn-sm btn-outline"><i class="bi bi-box-arrow-in-right"></i> Log In</a>
+          <a href="account.html" class="btn btn-sm btn-primary"><i class="bi bi-person-circle"></i> Account</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      
+      <!-- Help Center Hero -->
+      <div class="text-center mb-4" style="max-width: 760px; margin-left: auto; margin-right: auto;">
+        <span class="badge badge-accent mb-1"><i class="bi bi-question-circle-fill"></i> StreamFlix Support Hub</span>
+        <h1 class="section-title">How Can We Help You Today?</h1>
+        <p class="section-subtitle">Search our knowledge base or browse frequently answered questions below.</p>
+        
+        <form action="help.html" method="get" class="search-bar" style="max-width: 580px; margin-top: 1.5rem;">
+          <i class="bi bi-search search-icon"></i>
+          <input type="text" placeholder="Type a question, topic, or error code (e.g., buffering, billing, 4K HDR)...">
+        </form>
+      </div>
+
+      <!-- 4 Quick Category Cards with Bootstrap Icons -->
+      <div class="grid grid-4 mb-4">
+        
+        <div class="card p-3 text-center">
+          <div class="feature-icon" style="margin: 0 auto 1rem;"><i class="bi bi-film"></i></div>
+          <h3 class="card-title" style="font-size: 1.1rem;">Getting Started</h3>
+          <p class="card-text mb-2">Creating an account, setting up profiles, and supported Smart TVs.</p>
+          <a href="#faq" class="text-accent text-sm" style="font-weight: 600;">Explore Articles <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="card p-3 text-center">
+          <div class="feature-icon" style="margin: 0 auto 1rem;"><i class="bi bi-credit-card-2-front-fill"></i></div>
+          <h3 class="card-title" style="font-size: 1.1rem;">Billing &amp; Plans</h3>
+          <p class="card-text mb-2">Managing payments, changing your subscription tier, and receipts.</p>
+          <a href="#faq" class="text-accent text-sm" style="font-weight: 600;">View Billing Guide <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="card p-3 text-center">
+          <div class="feature-icon" style="margin: 0 auto 1rem;"><i class="bi bi-phone"></i></div>
+          <h3 class="card-title" style="font-size: 1.1rem;">Using StreamFlix</h3>
+          <p class="card-text mb-2">Offline downloading, subtitles, parental pin control, and audio sync.</p>
+          <a href="#faq" class="text-accent text-sm" style="font-weight: 600;">Feature Guide <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="card p-3 text-center">
+          <div class="feature-icon" style="margin: 0 auto 1rem;"><i class="bi bi-wrench-adjustable-circle-fill"></i></div>
+          <h3 class="card-title" style="font-size: 1.1rem;">Troubleshooting</h3>
+          <p class="card-text mb-2">Buffering fixes, resolution diagnostics, and password resets.</p>
+          <a href="#faq" class="text-accent text-sm" style="font-weight: 600;">Resolve Issues <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+      <!-- 12 FAQ Accordions (details / summary) -->
+      <section id="faq" class="mb-4" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div class="text-center mb-3">
+          <h2 class="section-title">Frequently Answered Questions</h2>
+          <p class="section-subtitle">Click any topic to expand comprehensive step-by-step guidance.</p>
+        </div>
+
+        <!-- FAQ 1 -->
+        <details open>
+          <summary>1. How do I create an account and start my trial?</summary>
+          <div class="accordion-content">
+            Visit our <a href="signup.html" style="color: var(--accent);">Sign Up</a> page. Fill out your name, email, preferred password, date of birth, and country. Then choose your preferred plan on the <a href="plans.html" style="color: var(--accent);">Plans</a> page. You'll receive instant access with your first 30 days on us.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details>
+          <summary>2. What membership plans does StreamFlix provide?</summary>
+          <div class="accordion-content">
+            We offer three distinct plans: <strong>Basic ($8.99/mo)</strong> with 720p HD and 1 screen; <strong>Standard ($13.99/mo)</strong> with 1080p Full HD and 2 screens; and <strong>Premium ($17.99/mo)</strong> with 4K Ultra HD, Dolby Atmos, and 4 concurrent screens.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details>
+          <summary>3. How do I cancel my subscription?</summary>
+          <div class="accordion-content">
+            You can cancel with zero hassle at any time. Go to <a href="account.html" style="color: var(--accent);">Account Settings</a>, locate the "Active Subscription" card, and click "Cancel Plan". Your access remains active until the end of your prepaid billing period.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details>
+          <summary>4. Can I download movies and shows to watch offline?</summary>
+          <div class="accordion-content">
+            Yes! On our Standard and Premium tiers, you can tap the download button on any title in the <a href="details.html?id=dune2" style="color: var(--accent);">Details page</a> or <a href="my-list.html" style="color: var(--accent);">My List</a>. Downloads remain playable offline for up to 30 days without an active internet connection.
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details>
+          <summary>5. How many screens can stream concurrently on one account?</summary>
+          <div class="accordion-content">
+            Basic supports 1 screen, Standard supports 2 simultaneous screens, and Premium supports up to 4 simultaneous streams across smart TVs, laptops, consoles, or phones.
+          </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details>
+          <summary>6. What devices and platforms are compatible?</summary>
+          <div class="accordion-content">
+            StreamFlix is fully compatible with modern web browsers (Chrome, Edge, Firefox, Safari), Smart TVs (Samsung, LG, Sony, Android TV), Apple TV, Roku, Fire TV Stick, PlayStation 5, Xbox Series X, and iOS/Android mobile apps.
+          </div>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details>
+          <summary>7. How do I reset or change my password?</summary>
+          <div class="accordion-content">
+            If you are signed in, navigate to <a href="account.html#security" style="color: var(--accent);">Account Security</a> to input your current password and establish a new one. If you have forgotten your password, use the "Forgot Password" link on our <a href="login.html" style="color: var(--accent);">Sign In</a> page to receive a secure recovery email.
+          </div>
+        </details>
+
+        <!-- FAQ 8 -->
+        <details>
+          <summary>8. Why is video buffering or playing in low resolution?</summary>
+          <div class="accordion-content">
+            StreamFlix uses adaptive streaming. Check that your connection is at least 5 Mbps for HD or 25 Mbps for 4K Ultra HD. You can also manually adjust your preferred streaming bitrate in <a href="account.html#playback" style="color: var(--accent);">Account Preferences</a>.
+          </div>
+        </details>
+
+        <!-- FAQ 9 -->
+        <details>
+          <summary>9. How do I manage or add user profiles for family?</summary>
+          <div class="accordion-content">
+            Visit the <a href="profiles.html" style="color: var(--accent);">Profiles Screen</a>. Each account supports up to 5 profiles, including dedicated Kids profiles with restricted age ratings and customizable parental PIN controls.
+          </div>
+        </details>
+
+        <!-- FAQ 10 -->
+        <details>
+          <summary>10. What is StreamFlix's refund policy?</summary>
+          <div class="accordion-content">
+            If you experience technical issues or are dissatisfied within the first 14 days of an automatic billing cycle, contact our 24/7 billing support team through the contact options below to request a full refund.
+          </div>
+        </details>
+
+        <!-- FAQ 11 -->
+        <details>
+          <summary>11. How do I update my payment credit card or PayPal?</summary>
+          <div class="accordion-content">
+            Visit <a href="account.html" style="color: var(--accent);">Account Settings</a>, click the "Subscription" card, and select "Update Payment Method". All transactions are protected by 256-bit SSL encryption.
+          </div>
+        </details>
+
+        <!-- FAQ 12 -->
+        <details>
+          <summary>12. Is there a free trial period?</summary>
+          <div class="accordion-content">
+            Yes! Every new account registration begins with a 30-day complimentary trial with all premium features unlocked. You can cancel at any moment during the trial without paying anything.
+          </div>
+        </details>
+
+      </section>
+
+      <!-- Contact Support Cards with Bootstrap Icons -->
+      <section class="mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.06);">
+        <div class="text-center mb-4">
+          <h2 class="section-title">Still Need Assistance?</h2>
+          <p class="section-subtitle">Our customer concierge team is on standby 24/7/365.</p>
+        </div>
+
+        <div class="grid grid-3">
+          
+          <div class="card p-4 text-center">
+            <div class="feature-icon" style="margin: 0 auto 1rem;"><i class="bi bi-chat-dots-fill"></i></div>
+            <h3 class="card-title">Live Chat</h3>
+            <p class="card-text mb-2">Instant messaging with a technical streaming specialist. Typical wait time: 1 minute.</p>
+            <a href="help.html" class="btn btn-sm btn-primary"><i class="bi bi-chat-text-fill"></i> Start Live Chat</a>
+          </div>
+
+          <div class="card p-4 text-center">
+            <div class="feature-icon" style="margin: 0 auto 1rem;"><i class="bi bi-envelope-fill"></i></div>
+            <h3 class="card-title">Email Ticket</h3>
+            <p class="card-text mb-2">Send a detailed inquiry regarding billing, copyright, or account verification.</p>
+            <a href="mailto:support@streamflix.example" class="btn btn-sm btn-outline"><i class="bi bi-envelope"></i> support@streamflix.com</a>
+          </div>
+
+          <div class="card p-4 text-center">
+            <div class="feature-icon" style="margin: 0 auto 1rem;"><i class="bi bi-telephone-fill"></i></div>
+            <h3 class="card-title">Toll-Free Phone</h3>
+            <p class="card-text mb-2">Call directly from your mobile phone or landline for immediate account support.</p>
+            <a href="tel:18005550199" class="btn btn-sm btn-secondary"><i class="bi bi-telephone"></i> +1 (800) 555-FLIX</a>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-globe"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="trending.html">Trending Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="my-list.html">My Saved Watchlist</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html#faq">FAQ</a></li>
+          <li><a href="help.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who's Watching? — StreamFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body style="justify-content: space-between;">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="account.html" class="btn btn-sm btn-outline"><i class="bi bi-gear-fill"></i> Settings</a>
+          <a href="login.html" class="btn btn-sm btn-secondary"><i class="bi bi-box-arrow-right"></i> Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profiles Selection Section -->
+  <main class="section flex-1 flex items-center justify-center" style="min-height: calc(100vh - 160px);">
+    <div class="container text-center">
+      <span class="badge badge-accent mb-2"><i class="bi bi-people-fill"></i> Multi-User Space</span>
+      <h1 class="section-title" style="font-size: 2.8rem; margin-bottom: 0.5rem;">Who's Watching?</h1>
+      <p class="section-subtitle">Select your profile to load personalized watch history, recommendations, and list.</p>
+
+      <!-- Profile Grid with Real Portraits -->
+      <div class="flex justify-center gap-4 flex-wrap mt-4 mb-4">
+        
+        <!-- Profile 1: Alexander (Primary) -->
+        <a href="home.html" class="profile-card" style="text-decoration: none;">
+          <div class="profile-avatar" style="border: 3px solid var(--accent);">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Alexander">
+          </div>
+          <p style="font-weight: 700; color: var(--text-primary);">Alexander</p>
+          <span class="badge badge-accent" style="font-size: 0.7rem;"><i class="bi bi-star-fill"></i> Primary</span>
+        </a>
+
+        <!-- Profile 2: Sarah -->
+        <a href="home.html" class="profile-card" style="text-decoration: none;">
+          <div class="profile-avatar">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Sarah">
+          </div>
+          <p style="font-weight: 700; color: var(--text-primary);">Sarah</p>
+          <span class="text-sm text-muted">Sci-Fi &amp; Drama</span>
+        </a>
+
+        <!-- Profile 3: Liam -->
+        <a href="home.html" class="profile-card" style="text-decoration: none;">
+          <div class="profile-avatar">
+            <img src="https://image.tmdb.org/t/p/w300/BE2sdjpgsa2rNTFa66f7upkaOP.jpg" alt="Liam">
+          </div>
+          <p style="font-weight: 700; color: var(--text-primary);">Liam</p>
+          <span class="text-sm text-muted">Action &amp; Blockbusters</span>
+        </a>
+
+        <!-- Profile 4: Kids Zone -->
+        <a href="home.html" class="profile-card" style="text-decoration: none;">
+          <div class="profile-avatar" style="background: linear-gradient(135deg, #ff7675, #6c5ce7); font-size: 3.5rem;">
+            <i class="bi bi-controller" style="color: #fff;"></i>
+          </div>
+          <p style="font-weight: 700; color: var(--text-primary);">Kids Zone</p>
+          <span class="badge badge-secondary" style="font-size: 0.7rem;"><i class="bi bi-shield-fill-check"></i> PG-Rating Only</span>
+        </a>
+
+        <!-- Profile 5: Add Profile -->
+        <a href="account.html" class="profile-card" style="text-decoration: none;">
+          <div class="profile-avatar" style="border: 2px dashed var(--text-muted); font-size: 2.5rem; color: var(--text-muted);">
+            <i class="bi bi-plus-lg"></i>
+          </div>
+          <p style="font-weight: 600; color: var(--text-secondary);">Add Profile</p>
+          <span class="text-sm text-muted">New Viewer</span>
+        </a>
+
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex gap-2 justify-center mt-4">
+        <a href="account.html" class="btn btn-outline"><i class="bi bi-gear-fill"></i> Manage Profiles</a>
+        <a href="home.html" class="btn btn-primary">Enter StreamFlix <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Website"><i class="bi bi-globe"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">Security &amp; PIN Controls</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>

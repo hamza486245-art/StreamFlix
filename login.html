@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — StreamFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="login.html" class="btn btn-sm btn-outline active"><i class="bi bi-box-arrow-in-right"></i> Log In</a>
+          <a href="signup.html" class="btn btn-sm btn-primary"><i class="bi bi-person-plus-fill"></i> Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Auth Wrapper -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="text-center mb-3">
+        <span class="badge badge-secondary mb-1"><i class="bi bi-shield-lock-fill"></i> Welcome Back</span>
+        <h2>Sign In to StreamFlix</h2>
+        <p class="auth-subtitle">Continue your cinematic journey across your personal watchlist.</p>
+      </div>
+
+      <form action="profiles.html" method="get">
+        <div class="form-group">
+          <label for="login-email"><i class="bi bi-person-fill"></i> Email or Phone Number</label>
+          <input type="text" id="login-email" name="login-email" class="form-control" placeholder="user@example.com" value="alexander@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <div class="flex justify-between items-center mb-1">
+            <label for="login-password" style="margin-bottom: 0;"><i class="bi bi-key-fill"></i> Password</label>
+            <a href="help.html" class="text-sm" style="color: var(--accent);">Forgot Password?</a>
+          </div>
+          <input type="password" id="login-password" name="login-password" class="form-control" placeholder="Enter password" value="••••••••••••" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-check">
+            <input type="checkbox" name="remember" checked>
+            <span>Remember my sign-in on this browser for 30 days</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.05rem; padding: 0.9rem;">
+          Sign In to Profiles <i class="bi bi-arrow-right"></i>
+        </button>
+
+        <div class="auth-divider">or sign in with</div>
+
+        <div class="grid grid-3" style="gap: 0.75rem;">
+          <a href="#" data-provider="google" class="btn btn-secondary btn-sm" style="font-size: 0.85rem;"><i class="bi bi-google"></i> Google</a>
+          <a href="#" data-provider="apple" class="btn btn-secondary btn-sm" style="font-size: 0.85rem;"><i class="bi bi-apple"></i> Apple</a>
+          <a href="#" data-provider="facebook" class="btn btn-secondary btn-sm" style="font-size: 0.85rem;"><i class="bi bi-facebook"></i> Facebook</a>
+        </div>
+
+        <div class="card p-3 mt-3 text-center" style="background: var(--bg-surface); box-shadow: var(--shadow-neu-inset-sm);">
+          <p class="text-sm text-secondary">New to StreamFlix? <a href="signup.html" style="color: var(--accent); font-weight: 700;">Sign up now</a> for a complimentary trial.</p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Website"><i class="bi bi-globe"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="signup.html">Register New Account</a></li>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">Customer Service</a></li>
+          <li><a href="help.html">Security &amp; Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>

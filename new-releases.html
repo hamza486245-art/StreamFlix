@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Releases — StreamFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html" class="active">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="profiles.html" class="btn btn-sm btn-outline"><i class="bi bi-people-fill"></i> Profiles</a>
+          <a href="account.html" class="btn btn-sm btn-primary"><i class="bi bi-person-circle"></i> Account</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      
+      <div class="flex justify-between items-center mb-4 flex-wrap gap-2">
+        <div>
+          <span class="badge badge-accent mb-1"><i class="bi bi-calendar-check-fill"></i> Weekly Premieres</span>
+          <h1 class="section-title">New Releases &amp; Upcoming</h1>
+          <p class="section-subtitle" style="margin-bottom: 0;">Be the first to stream our latest movie premieres, docuseries, and original seasons.</p>
+        </div>
+        <div class="genre-bar" style="padding: 0;">
+          <a href="new-releases.html" class="genre-pill active"><i class="bi bi-stars"></i> All New</a>
+          <a href="#just-added" class="genre-pill"><i class="bi bi-clock-history"></i> Just Added</a>
+          <a href="#coming-soon" class="genre-pill"><i class="bi bi-bell-fill"></i> Coming Soon</a>
+          <a href="#last-30" class="genre-pill"><i class="bi bi-calendar3"></i> Last 30 Days</a>
+        </div>
+      </div>
+
+      <!-- Section: Just Added (Scroll Row with Real Posters) -->
+      <section id="just-added" class="mb-4">
+        <div class="flex justify-between items-center mb-2">
+          <div>
+            <h2 class="section-title" style="font-size: 1.4rem;">Added This Week</h2>
+            <p class="text-sm text-muted">Stream these titles instantly in 4K HDR</p>
+          </div>
+          <span class="badge badge-secondary"><i class="bi bi-film"></i> 8 New Titles</span>
+        </div>
+
+        <div class="scroll-row">
+          <!-- Alien Romulus -->
+          <a href="details.html?id=alien-romulus" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg" alt="Alien: Romulus">
+            <div class="poster-overlay">
+              <h3>Alien: Romulus</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 8.8</div>
+              <span class="genre-tag">Added Today</span>
+            </div>
+          </a>
+
+          <!-- Deadpool & Wolverine -->
+          <a href="details.html?id=deadpool-wolverine" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" alt="Deadpool &amp; Wolverine">
+            <div class="poster-overlay">
+              <h3>Deadpool &amp; Wolverine</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 8.9</div>
+              <span class="genre-tag">Added Yesterday</span>
+            </div>
+          </a>
+
+          <!-- Gladiator II -->
+          <a href="details.html?id=gladiator-2" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg" alt="Gladiator II">
+            <div class="poster-overlay">
+              <h3>Gladiator II</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+              <span class="genre-tag">3 Days Ago</span>
+            </div>
+          </a>
+
+          <!-- Shōgun -->
+          <a href="details.html?id=shogun" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg" alt="Shōgun">
+            <div class="poster-overlay">
+              <h3>Shōgun</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 9.3</div>
+              <span class="genre-tag">4 Days Ago</span>
+            </div>
+          </a>
+
+          <!-- Dune 2 -->
+          <a href="details.html?id=dune2" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune: Part Two">
+            <div class="poster-overlay">
+              <h3>Dune: Part Two</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+              <span class="genre-tag">5 Days Ago</span>
+            </div>
+          </a>
+
+          <!-- Arcane Season 2 -->
+          <a href="details.html?id=arcane" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg" alt="Arcane Season 2">
+            <div class="poster-overlay">
+              <h3>Arcane S2</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 9.6</div>
+              <span class="genre-tag">6 Days Ago</span>
+            </div>
+          </a>
+
+          <!-- Squid Game S2 -->
+          <a href="details.html?id=squid-game" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg" alt="Squid Game">
+            <div class="poster-overlay">
+              <h3>Squid Game S2</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+              <span class="genre-tag">1 Week Ago</span>
+            </div>
+          </a>
+
+          <!-- Top Gun Maverick -->
+          <a href="details.html?id=top-gun-maverick" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="Top Gun: Maverick">
+            <div class="poster-overlay">
+              <h3>Top Gun: Maverick</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 9.2</div>
+              <span class="genre-tag">1 Week Ago</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: Coming Soon Big Preview Cards with Real Franchises -->
+      <section id="coming-soon" class="mb-4">
+        <div class="mb-3">
+          <h2 class="section-title" style="font-size: 1.4rem;">Coming Soon to StreamFlix</h2>
+          <p class="text-sm text-muted">Set a reminder to be alerted the second these hit our catalog</p>
+        </div>
+
+        <div class="grid grid-2">
+          
+          <!-- Coming Soon 1: The Batman Part II -->
+          <div class="card p-3">
+            <div class="grid grid-2" style="gap: 1.25rem; align-items: center;">
+              <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="The Batman: Part II" class="card-img" style="height: 220px; border-radius: var(--radius-sm);">
+              <div>
+                <span class="badge badge-accent mb-1"><i class="bi bi-calendar-event"></i> Theatrical Premiere</span>
+                <h3 class="card-title" style="font-size: 1.2rem;">The Batman: Part II</h3>
+                <p class="card-subtitle">DC Films • Directed by Matt Reeves</p>
+                <p class="card-text mb-2">Robert Pattinson returns as Bruce Wayne facing Gotham's deeply fractured underworld in the dark winter aftermath.</p>
+                <a href="my-list.html" class="btn btn-sm btn-outline"><i class="bi bi-bell-fill"></i> Remind Me</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coming Soon 2: Stranger Things Season 5 -->
+          <div class="card p-3">
+            <div class="grid grid-2" style="gap: 1.25rem; align-items: center;">
+              <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" alt="Stranger Things 5" class="card-img" style="height: 220px; border-radius: var(--radius-sm);">
+              <div>
+                <span class="badge badge-secondary mb-1"><i class="bi bi-fire"></i> Final Epic Season</span>
+                <h3 class="card-title" style="font-size: 1.2rem;">Stranger Things 5</h3>
+                <p class="card-subtitle">Duffer Brothers • Series Finale</p>
+                <p class="card-text mb-2">The party unites for one last stand against the Upside Down as the dimensional rift tears Hawkins completely apart.</p>
+                <a href="my-list.html" class="btn btn-sm btn-outline"><i class="bi bi-bell-fill"></i> Remind Me</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coming Soon 3: Severance Season 2 -->
+          <div class="card p-3">
+            <div class="grid grid-2" style="gap: 1.25rem; align-items: center;">
+              <img src="https://image.tmdb.org/t/p/w500/pPHpeI2X1qEd1CS1SeyrdhZ4qnT.jpg" alt="Severance Season 2" class="card-img" style="height: 220px; border-radius: var(--radius-sm);">
+              <div>
+                <span class="badge badge-accent mb-1"><i class="bi bi-stars"></i> Exclusive Series</span>
+                <h3 class="card-title" style="font-size: 1.2rem;">Severance: Season 2</h3>
+                <p class="card-subtitle">Psychological Thriller • Apple / StreamFlix</p>
+                <p class="card-text mb-2">Mark and his Macrodata Refinement colleagues suffer the consequences of their daring overtime protocol broadcast.</p>
+                <a href="my-list.html" class="btn btn-sm btn-outline"><i class="bi bi-bell-fill"></i> Remind Me</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coming Soon 4: Avatar 3 -->
+          <div class="card p-3">
+            <div class="grid grid-2" style="gap: 1.25rem; align-items: center;">
+              <img src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" alt="Avatar: Fire and Ash" class="card-img" style="height: 220px; border-radius: var(--radius-sm);">
+              <div>
+                <span class="badge badge-tertiary mb-1"><i class="bi bi-badge-4k-fill"></i> 4K 3D Theatrical</span>
+                <h3 class="card-title" style="font-size: 1.2rem;">Avatar: Fire and Ash</h3>
+                <p class="card-subtitle">James Cameron • Sci-Fi Epic</p>
+                <p class="card-text mb-2">Jake Sully and Neytiri encounter the Ash People, a volcanic clan of Na'vi who test the limits of loyalty across Pandora.</p>
+                <a href="my-list.html" class="btn btn-sm btn-outline"><i class="bi bi-bell-fill"></i> Remind Me</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section: Last 30 Days (Grid 4 with Real Movies) -->
+      <section id="last-30">
+        <div class="flex justify-between items-center mb-3">
+          <div>
+            <h2 class="section-title" style="font-size: 1.4rem;">Popular From the Last 30 Days</h2>
+            <p class="text-sm text-muted">Catch up on recent fan favorites you may have missed</p>
+          </div>
+          <a href="movies.html" class="text-accent text-sm" style="font-weight: 600;">Explore Full Library <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="grid grid-4">
+          <!-- Oppenheimer -->
+          <a href="details.html?id=oppenheimer" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer">
+            <div class="poster-overlay">
+              <h3>Oppenheimer</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 9.2</div>
+              <span class="genre-tag">Historical</span>
+            </div>
+          </a>
+
+          <!-- John Wick 4 -->
+          <a href="details.html?id=john-wick-4" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="John Wick 4">
+            <div class="poster-overlay">
+              <h3>John Wick: Chapter 4</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 8.9</div>
+              <span class="genre-tag">Action</span>
+            </div>
+          </a>
+
+          <!-- Across the Spider-Verse -->
+          <a href="details.html?id=spider-verse" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Across the Spider-Verse">
+            <div class="poster-overlay">
+              <h3>Across the Spider-Verse</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+              <span class="genre-tag">Animation</span>
+            </div>
+          </a>
+
+          <!-- The Last of Us -->
+          <a href="details.html?id=the-last-of-us" class="poster-card">
+            <img src="https://image.tmdb.org/t/p/w500/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg" alt="The Last of Us">
+            <div class="poster-overlay">
+              <h3>The Last of Us</h3>
+              <div class="rating"><i class="bi bi-star-fill"></i> 9.2</div>
+              <span class="genre-tag">Drama</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-globe"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="trending.html">Trending Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="my-list.html">My Saved Watchlist</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">FAQ</a></li>
+          <li><a href="help.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>

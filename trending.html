@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trending Now — StreamFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .rank-number {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1;
+      width: 60px;
+      color: var(--accent);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .top10-item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-neu);
+      padding: 1rem 1.5rem;
+      transition: var(--transition);
+      text-decoration: none;
+      color: inherit;
+    }
+    .top10-item:hover {
+      transform: translateX(8px);
+      box-shadow: 10px 10px 24px var(--neu-dark), -10px -10px 24px var(--neu-light);
+    }
+    .top10-thumb {
+      width: 60px;
+      height: 84px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      box-shadow: var(--specular), var(--shadow-1);
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html" class="active">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="profiles.html" class="btn btn-sm btn-outline"><i class="bi bi-people-fill"></i> Profiles</a>
+          <a href="account.html" class="btn btn-sm btn-primary"><i class="bi bi-person-circle"></i> Account</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      
+      <div class="text-center mb-4">
+        <span class="badge badge-accent mb-1"><i class="bi bi-fire"></i> Viral Hits &amp; Most Watched</span>
+        <h1 class="section-title">Trending Now on StreamFlix</h1>
+        <p class="section-subtitle">Real-time engagement rankings updated hourly from global streams.</p>
+      </div>
+
+      <!-- CSS-Only Tabs Using Radio Technique with Bootstrap Icons -->
+      <div class="tabs-container mb-4">
+        <input type="radio" name="trending-tabs" id="tab1" checked>
+        <input type="radio" name="trending-tabs" id="tab2">
+        <input type="radio" name="trending-tabs" id="tab3">
+
+        <div class="tab-labels">
+          <label for="tab1"><i class="bi bi-fire"></i> Trending Today</label>
+          <label for="tab2"><i class="bi bi-calendar-week"></i> Trending This Week</label>
+          <label for="tab3"><i class="bi bi-trophy-fill"></i> All-Time Monthly Top</label>
+        </div>
+
+        <div class="tab-panels">
+          
+          <!-- Panel 1: Today with Real Posters -->
+          <div class="tab-panel">
+            <div class="grid grid-4">
+              <!-- Dune 2 -->
+              <a href="details.html?id=dune2" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune: Part Two">
+                <div class="poster-overlay">
+                  <h3>Dune: Part Two</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+                  <span class="genre-tag">#1 Trending</span>
+                </div>
+              </a>
+
+              <!-- Shogun -->
+              <a href="details.html?id=shogun" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg" alt="Shōgun">
+                <div class="poster-overlay">
+                  <h3>Shōgun</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.3</div>
+                  <span class="genre-tag">#2 Trending</span>
+                </div>
+              </a>
+
+              <!-- Deadpool & Wolverine -->
+              <a href="details.html?id=deadpool-wolverine" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" alt="Deadpool &amp; Wolverine">
+                <div class="poster-overlay">
+                  <h3>Deadpool &amp; Wolverine</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 8.9</div>
+                  <span class="genre-tag">#3 Trending</span>
+                </div>
+              </a>
+
+              <!-- Gladiator II -->
+              <a href="details.html?id=gladiator-2" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg" alt="Gladiator II">
+                <div class="poster-overlay">
+                  <h3>Gladiator II</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+                  <span class="genre-tag">#4 Trending</span>
+                </div>
+              </a>
+
+              <!-- The Batman -->
+              <a href="details.html?id=the-batman" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="The Batman">
+                <div class="poster-overlay">
+                  <h3>The Batman</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 8.9</div>
+                  <span class="genre-tag">#5 Trending</span>
+                </div>
+              </a>
+
+              <!-- Across the Spider-Verse -->
+              <a href="details.html?id=spider-verse" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Across the Spider-Verse">
+                <div class="poster-overlay">
+                  <h3>Across the Spider-Verse</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+                  <span class="genre-tag">#6 Trending</span>
+                </div>
+              </a>
+
+              <!-- Alien: Romulus -->
+              <a href="details.html?id=alien-romulus" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg" alt="Alien: Romulus">
+                <div class="poster-overlay">
+                  <h3>Alien: Romulus</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 8.8</div>
+                  <span class="genre-tag">#7 Trending</span>
+                </div>
+              </a>
+
+              <!-- The Last of Us -->
+              <a href="details.html?id=the-last-of-us" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg" alt="The Last of Us">
+                <div class="poster-overlay">
+                  <h3>The Last of Us</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.2</div>
+                  <span class="genre-tag">#8 Trending</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Panel 2: This Week with Real Posters -->
+          <div class="tab-panel">
+            <div class="grid grid-4">
+              <!-- Oppenheimer -->
+              <a href="details.html?id=oppenheimer" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer">
+                <div class="poster-overlay">
+                  <h3>Oppenheimer</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.2</div>
+                  <span class="genre-tag">Week Peak</span>
+                </div>
+              </a>
+
+              <!-- Stranger Things -->
+              <a href="details.html?id=stranger-things" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" alt="Stranger Things">
+                <div class="poster-overlay">
+                  <h3>Stranger Things S4</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+                  <span class="genre-tag">Binge King</span>
+                </div>
+              </a>
+
+              <!-- Interstellar -->
+              <a href="details.html?id=interstellar" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar">
+                <div class="poster-overlay">
+                  <h3>Interstellar</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.6</div>
+                  <span class="genre-tag">Sci-Fi Epic</span>
+                </div>
+              </a>
+
+              <!-- Breaking Bad -->
+              <a href="details.html?id=breaking-bad" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="Breaking Bad">
+                <div class="poster-overlay">
+                  <h3>Breaking Bad</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.7</div>
+                  <span class="genre-tag">All-Time Peak</span>
+                </div>
+              </a>
+
+              <!-- Arcane -->
+              <a href="details.html?id=arcane" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg" alt="Arcane">
+                <div class="poster-overlay">
+                  <h3>Arcane S2</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.6</div>
+                  <span class="genre-tag">Animation</span>
+                </div>
+              </a>
+
+              <!-- Squid Game -->
+              <a href="details.html?id=squid-game" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg" alt="Squid Game">
+                <div class="poster-overlay">
+                  <h3>Squid Game</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+                  <span class="genre-tag">Thriller</span>
+                </div>
+              </a>
+
+              <!-- Peaky Blinders -->
+              <a href="details.html?id=peaky-blinders" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg" alt="Peaky Blinders">
+                <div class="poster-overlay">
+                  <h3>Peaky Blinders</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+                  <span class="genre-tag">Drama</span>
+                </div>
+              </a>
+
+              <!-- The Dark Knight -->
+              <a href="details.html?id=the-dark-knight" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight">
+                <div class="poster-overlay">
+                  <h3>The Dark Knight</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.5</div>
+                  <span class="genre-tag">Masterpiece</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Panel 3: Monthly Top with Real Posters -->
+          <div class="tab-panel">
+            <div class="grid grid-4">
+              <!-- Chernobyl -->
+              <a href="details.html?id=chernobyl" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg" alt="Chernobyl">
+                <div class="poster-overlay">
+                  <h3>Chernobyl</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.8</div>
+                  <span class="genre-tag">#1 of Month</span>
+                </div>
+              </a>
+
+              <!-- Game of Thrones -->
+              <a href="details.html?id=game-of-thrones" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg" alt="Game of Thrones">
+                <div class="poster-overlay">
+                  <h3>Game of Thrones</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+                  <span class="genre-tag">85M Streams</span>
+                </div>
+              </a>
+
+              <!-- Severance -->
+              <a href="details.html?id=severance" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/pPHpeI2X1qEd1CS1SeyrdhZ4qnT.jpg" alt="Severance">
+                <div class="poster-overlay">
+                  <h3>Severance</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.3</div>
+                  <span class="genre-tag">Breakout</span>
+                </div>
+              </a>
+
+              <!-- Succession -->
+              <a href="details.html?id=succession" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/hS62paPx7Ls3c6voXcXJzJNaTG4.jpg" alt="Succession">
+                <div class="poster-overlay">
+                  <h3>Succession</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.5</div>
+                  <span class="genre-tag">Prestige</span>
+                </div>
+              </a>
+
+              <!-- Better Call Saul -->
+              <a href="details.html?id=better-call-saul" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg" alt="Better Call Saul">
+                <div class="poster-overlay">
+                  <h3>Better Call Saul</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.5</div>
+                  <span class="genre-tag">Award Winner</span>
+                </div>
+              </a>
+
+              <!-- The Matrix -->
+              <a href="details.html?id=the-matrix" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="The Matrix">
+                <div class="poster-overlay">
+                  <h3>The Matrix</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.6</div>
+                  <span class="genre-tag">Essential</span>
+                </div>
+              </a>
+
+              <!-- Blade Runner 2049 -->
+              <a href="details.html?id=blade-runner-2049" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg" alt="Blade Runner 2049">
+                <div class="poster-overlay">
+                  <h3>Blade Runner 2049</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+                  <span class="genre-tag">Visual Wonder</span>
+                </div>
+              </a>
+
+              <!-- Inception -->
+              <a href="details.html?id=inception" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg" alt="Inception">
+                <div class="poster-overlay">
+                  <h3>Inception</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.5</div>
+                  <span class="genre-tag">4K Master</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Top 10 in Your Country Section with Real Thumbnails -->
+      <div class="mt-4">
+        <div class="flex justify-between items-center mb-3">
+          <div>
+            <h2 class="section-title">Top 10 in Your Region</h2>
+            <p class="section-subtitle">Ranked by local concurrent streams over the past 24 hours</p>
+          </div>
+          <span class="badge badge-accent"><i class="bi bi-broadcast"></i> Live Regional Data</span>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <!-- Rank 1 -->
+          <a href="details.html?id=dune2" class="top10-item">
+            <div class="rank-number">1</div>
+            <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune: Part Two" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Dune: Part Two (2024)</h3>
+              <p class="text-sm text-muted">Sci-Fi • Adventure • 2h 46m • PG-13</p>
+            </div>
+            <span class="badge badge-accent"><i class="bi bi-fire"></i> #1 Today</span>
+          </a>
+
+          <!-- Rank 2 -->
+          <a href="details.html?id=shogun" class="top10-item">
+            <div class="rank-number">2</div>
+            <img src="https://image.tmdb.org/t/p/w500/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg" alt="Shōgun" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Shōgun: Season 1</h3>
+              <p class="text-sm text-muted">Historical Drama • 10 Episodes • TV-MA</p>
+            </div>
+            <span class="badge badge-secondary"><i class="bi bi-hand-thumbs-up-fill"></i> 98% Positive</span>
+          </a>
+
+          <!-- Rank 3 -->
+          <a href="details.html?id=deadpool-wolverine" class="top10-item">
+            <div class="rank-number">3</div>
+            <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" alt="Deadpool &amp; Wolverine" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Deadpool &amp; Wolverine</h3>
+              <p class="text-sm text-muted">Action • Comedy • 2h 08m • R</p>
+            </div>
+            <span class="badge badge-secondary"><i class="bi bi-graph-up-arrow"></i> Trending Up</span>
+          </a>
+
+          <!-- Rank 4 -->
+          <a href="details.html?id=stranger-things" class="top10-item">
+            <div class="rank-number">4</div>
+            <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" alt="Stranger Things" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Stranger Things</h3>
+              <p class="text-sm text-muted">Sci-Fi • Horror • Season 4 • TV-14</p>
+            </div>
+            <span class="badge badge-tertiary">Fan Favorite</span>
+          </a>
+
+          <!-- Rank 5 -->
+          <a href="details.html?id=oppenheimer" class="top10-item">
+            <div class="rank-number">5</div>
+            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Oppenheimer</h3>
+              <p class="text-sm text-muted">Biography • History • 3h 00m • R</p>
+            </div>
+            <span class="badge badge-secondary"><i class="bi bi-badge-4k-fill"></i> 4K Ultra HD</span>
+          </a>
+
+          <!-- Rank 6 -->
+          <a href="details.html?id=gladiator-2" class="top10-item">
+            <div class="rank-number">6</div>
+            <img src="https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg" alt="Gladiator II" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Gladiator II</h3>
+              <p class="text-sm text-muted">Action • Epic • 2h 28m • R</p>
+            </div>
+            <span class="badge badge-tertiary">New Release</span>
+          </a>
+
+          <!-- Rank 7 -->
+          <a href="details.html?id=the-last-of-us" class="top10-item">
+            <div class="rank-number">7</div>
+            <img src="https://image.tmdb.org/t/p/w500/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg" alt="The Last of Us" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">The Last of Us: Season 1</h3>
+              <p class="text-sm text-muted">Drama • Post-Apocalyptic • 9 Episodes • TV-MA</p>
+            </div>
+            <span class="badge badge-secondary">High Bitrate</span>
+          </a>
+
+          <!-- Rank 8 -->
+          <a href="details.html?id=spider-verse" class="top10-item">
+            <div class="rank-number">8</div>
+            <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Across the Spider-Verse" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Spider-Man: Across the Spider-Verse</h3>
+              <p class="text-sm text-muted">Animation • Adventure • 2h 20m • PG</p>
+            </div>
+            <span class="badge badge-secondary">Oscar Nominee</span>
+          </a>
+
+          <!-- Rank 9 -->
+          <a href="details.html?id=the-batman" class="top10-item">
+            <div class="rank-number">9</div>
+            <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="The Batman" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">The Batman (2022)</h3>
+              <p class="text-sm text-muted">Action • Crime Noir • 2h 56m • PG-13</p>
+            </div>
+            <span class="badge badge-tertiary">Dolby Atmos</span>
+          </a>
+
+          <!-- Rank 10 -->
+          <a href="details.html?id=breaking-bad" class="top10-item">
+            <div class="rank-number">10</div>
+            <img src="https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="Breaking Bad" class="top10-thumb">
+            <div style="flex: 1;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Breaking Bad: Complete Series</h3>
+              <p class="text-sm text-muted">Crime • Drama • 62 Episodes • TV-MA</p>
+            </div>
+            <span class="badge badge-accent">Top Rated Ever</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Website"><i class="bi bi-globe"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="trending.html">Trending Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="my-list.html">My Saved Watchlist</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">FAQ</a></li>
+          <li><a href="help.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>

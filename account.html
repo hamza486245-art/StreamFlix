@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Settings &amp; Billing — StreamFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .account-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 860px) {
+      .account-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="profiles.html" class="btn btn-sm btn-outline"><i class="bi bi-people-fill"></i> Profiles</a>
+          <a href="account.html" class="btn btn-sm btn-primary active"><i class="bi bi-person-circle"></i> Account</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      
+      <div class="mb-4">
+        <span class="badge badge-accent mb-1"><i class="bi bi-gear-fill"></i> Subscriber Center</span>
+        <h1 class="section-title">Account Settings &amp; Preferences</h1>
+        <p class="section-subtitle">Manage your profile, security, payment methods, and billing history.</p>
+      </div>
+
+      <div class="account-layout">
+        
+        <!-- Left Sidebar Navigation (Neumorphic) -->
+        <aside class="settings-sidebar">
+          <div class="text-center mb-3 pb-3" style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div class="profile-avatar" style="width: 80px; height: 80px; margin-bottom: 0.5rem; border: 2px solid var(--accent);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Alexander">
+            </div>
+            <h3 style="font-size: 1.05rem;">Alexander Vance</h3>
+            <span class="badge badge-accent" style="font-size: 0.7rem;"><i class="bi bi-check2-circle"></i> Standard Plan Active</span>
+          </div>
+
+          <ul>
+            <li><a href="#profile" class="active"><i class="bi bi-person-fill"></i> Personal Information</a></li>
+            <li><a href="#subscription"><i class="bi bi-credit-card-2-front-fill"></i> Subscription &amp; Tier</a></li>
+            <li><a href="#billing"><i class="bi bi-receipt"></i> Billing History &amp; Invoices</a></li>
+            <li><a href="#security"><i class="bi bi-shield-lock-fill"></i> Password &amp; 2FA Security</a></li>
+            <li><a href="#playback"><i class="bi bi-sliders"></i> Playback &amp; Audio Quality</a></li>
+            <li><a href="#notifications"><i class="bi bi-bell-fill"></i> Notification Preferences</a></li>
+            <li><a href="profiles.html"><i class="bi bi-people-fill"></i> Switch Active Profile</a></li>
+            <li><a href="login.html" style="color: var(--accent);"><i class="bi bi-box-arrow-right"></i> Sign Out All Devices</a></li>
+          </ul>
+        </aside>
+
+        <!-- Right Content Section -->
+        <div class="settings-content">
+          
+          <!-- 1. Profile Information -->
+          <section id="profile" class="mb-4">
+            <h2 class="card-title mb-3" style="font-size: 1.3rem;"><i class="bi bi-person-lines-fill"></i> Personal Information</h2>
+            
+            <form action="account.html" method="get">
+              <div class="grid grid-2" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label for="acc-name"><i class="bi bi-person"></i> Full Legal Name</label>
+                  <input type="text" id="acc-name" class="form-control" value="Alexander Vance">
+                </div>
+                <div class="form-group">
+                  <label for="acc-email"><i class="bi bi-envelope"></i> Primary Email Address</label>
+                  <input type="email" id="acc-email" class="form-control" value="alexander.vance@example.com">
+                </div>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label for="acc-phone"><i class="bi bi-phone"></i> Phone Number (SMS Recovery)</label>
+                  <input type="tel" id="acc-phone" class="form-control" value="+1 (555) 382-9014">
+                </div>
+                <div class="form-group">
+                  <label for="acc-lang"><i class="bi bi-translate"></i> Interface Display Language</label>
+                  <select id="acc-lang" class="form-control">
+                    <option selected>English (United States)</option>
+                    <option>Español</option>
+                    <option>Français</option>
+                    <option>Deutsch</option>
+                    <option>日本語</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-check-lg"></i> Save Profile Changes</button>
+            </form>
+          </section>
+
+          <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.06); margin: 2rem 0;">
+
+          <!-- 2. Subscription Details -->
+          <section id="subscription" class="mb-4">
+            <div class="flex justify-between items-center mb-3 flex-wrap gap-2">
+              <h2 class="card-title" style="font-size: 1.3rem; margin-bottom: 0;"><i class="bi bi-credit-card-fill"></i> Active Subscription</h2>
+              <a href="plans.html" class="btn btn-outline btn-sm"><i class="bi bi-arrow-up-circle-fill"></i> Change or Upgrade Plan</a>
+            </div>
+
+            <div class="card p-3" style="background: var(--bg-surface); box-shadow: var(--shadow-neu-inset-sm);">
+              <div class="flex justify-between items-center flex-wrap gap-2">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0;">Standard Tier ($13.99 / mo)</h3>
+                    <span class="badge badge-accent"><i class="bi bi-arrow-repeat"></i> Auto-Renewal Active</span>
+                  </div>
+                  <p class="text-sm text-secondary mt-1">Full HD 1080p • 2 Simultaneous Screens • Dolby 5.1 • Ad-Free</p>
+                  <p class="text-sm text-muted">Next automatic renewal date: <strong>November 28, 2026</strong> via Visa ending in <strong>4242</strong></p>
+                </div>
+                <div class="flex gap-2">
+                  <a href="plans.html" class="btn btn-sm btn-primary"><i class="bi bi-gem"></i> Upgrade to 4K</a>
+                  <a href="help.html" class="btn btn-sm btn-secondary">Cancel Plan</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.06); margin: 2rem 0;">
+
+          <!-- 3. Billing History Table -->
+          <section id="billing" class="mb-4">
+            <h2 class="card-title mb-2" style="font-size: 1.3rem;"><i class="bi bi-receipt-cutoff"></i> Billing &amp; Invoice History</h2>
+            <p class="text-sm text-muted mb-3">Download complete VAT/tax receipts for your accounting records.</p>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Invoice Date</th>
+                    <th>Description</th>
+                    <th>Payment Method</th>
+                    <th>Total Billed</th>
+                    <th>Status</th>
+                    <th>Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Oct 28, 2026</td>
+                    <td>StreamFlix Standard Monthly</td>
+                    <td><i class="bi bi-credit-card"></i> Visa •••• 4242</td>
+                    <td>$13.99</td>
+                    <td><span class="check"><i class="bi bi-check-circle-fill"></i> Paid</span></td>
+                    <td><a href="#" class="text-accent text-sm"><i class="bi bi-file-earmark-pdf-fill"></i> PDF</a></td>
+                  </tr>
+                  <tr>
+                    <td>Sep 28, 2026</td>
+                    <td>StreamFlix Standard Monthly</td>
+                    <td><i class="bi bi-credit-card"></i> Visa •••• 4242</td>
+                    <td>$13.99</td>
+                    <td><span class="check"><i class="bi bi-check-circle-fill"></i> Paid</span></td>
+                    <td><a href="#" class="text-accent text-sm"><i class="bi bi-file-earmark-pdf-fill"></i> PDF</a></td>
+                  </tr>
+                  <tr>
+                    <td>Aug 28, 2026</td>
+                    <td>StreamFlix Standard Monthly</td>
+                    <td><i class="bi bi-credit-card"></i> Visa •••• 4242</td>
+                    <td>$13.99</td>
+                    <td><span class="check"><i class="bi bi-check-circle-fill"></i> Paid</span></td>
+                    <td><a href="#" class="text-accent text-sm"><i class="bi bi-file-earmark-pdf-fill"></i> PDF</a></td>
+                  </tr>
+                  <tr>
+                    <td>Jul 28, 2026</td>
+                    <td>StreamFlix Standard Monthly</td>
+                    <td><i class="bi bi-credit-card"></i> Visa •••• 4242</td>
+                    <td>$13.99</td>
+                    <td><span class="check"><i class="bi bi-check-circle-fill"></i> Paid</span></td>
+                    <td><a href="#" class="text-accent text-sm"><i class="bi bi-file-earmark-pdf-fill"></i> PDF</a></td>
+                  </tr>
+                  <tr>
+                    <td>Jun 28, 2026</td>
+                    <td>StreamFlix Standard Monthly</td>
+                    <td><i class="bi bi-paypal"></i> PayPal (a.vance)</td>
+                    <td>$13.99</td>
+                    <td><span class="check"><i class="bi bi-check-circle-fill"></i> Paid</span></td>
+                    <td><a href="#" class="text-accent text-sm"><i class="bi bi-file-earmark-pdf-fill"></i> PDF</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.06); margin: 2rem 0;">
+
+          <!-- 4. Security Settings Form -->
+          <section id="security" class="mb-4">
+            <h2 class="card-title mb-3" style="font-size: 1.3rem;"><i class="bi bi-shield-lock"></i> Security &amp; Password Update</h2>
+            
+            <form action="account.html" method="get">
+              <div class="form-group">
+                <label for="current-pwd"><i class="bi bi-key"></i> Current Password</label>
+                <input type="password" id="current-pwd" class="form-control" placeholder="••••••••••••" required>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1.25rem;">
+                <div class="form-group">
+                  <label for="new-pwd"><i class="bi bi-key-fill"></i> New Password</label>
+                  <input type="password" id="new-pwd" class="form-control" placeholder="Min. 8 characters" required>
+                </div>
+                <div class="form-group">
+                  <label for="confirm-new-pwd"><i class="bi bi-check-all"></i> Confirm New Password</label>
+                  <input type="password" id="confirm-new-pwd" class="form-control" placeholder="Repeat new password" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-check">
+                  <input type="checkbox" checked>
+                  <span>Require Two-Factor Authentication (2FA via Authenticator App)</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" checked>
+                  <span>Sign out of all other web browsers and smart TVs immediately upon password change</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-outline btn-sm"><i class="bi bi-shield-check"></i> Update Password</button>
+            </form>
+          </section>
+
+          <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.06); margin: 2rem 0;">
+
+          <!-- 5. Playback & Notifications Preferences -->
+          <section id="playback" class="mb-4">
+            <h2 class="card-title mb-3" style="font-size: 1.3rem;"><i class="bi bi-sliders"></i> Playback &amp; Notification Preferences</h2>
+            
+            <div class="grid grid-2" style="gap: 1.25rem;">
+              <div class="form-group">
+                <label for="default-quality"><i class="bi bi-badge-hd-fill"></i> Default Streaming Bitrate</label>
+                <select id="default-quality" class="form-control">
+                  <option>Auto (Adjusts to your internet speed)</option>
+                  <option selected>High (Best Picture 1080p/4K - uses more data)</option>
+                  <option>Data Saver (Standard HD 720p)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="subtitle-lang"><i class="bi bi-card-text"></i> Default Subtitle Preference</label>
+                <select id="subtitle-lang" class="form-control">
+                  <option selected>English [CC]</option>
+                  <option>Off by default</option>
+                  <option>Español</option>
+                  <option>Français</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-check">
+                <input type="checkbox" checked>
+                <span>Autoplay next episode automatically while watching a series</span>
+              </label>
+              <label class="form-check">
+                <input type="checkbox" checked>
+                <span>Autoplay video trailers and previews while browsing catalog</span>
+              </label>
+              <label class="form-check">
+                <input type="checkbox" checked>
+                <span>Email me when a title on My List is about to leave StreamFlix</span>
+              </label>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-floppy-fill"></i> Save All Preferences</button>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-globe"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="trending.html">Trending Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="my-list.html">My Saved Watchlist</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">FAQ</a></li>
+          <li><a href="help.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>

@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Home — StreamFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .progress-bar-container {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+      box-shadow: 0 0 8px var(--accent-glow);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html" class="active">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="profiles.html" class="btn btn-sm btn-outline"><i class="bi bi-people-fill"></i> Profiles</a>
+          <a href="account.html" class="btn btn-sm btn-primary"><i class="bi bi-person-circle"></i> Account</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Featured Spotlight Hero — Ambient Blockbusters Slideshow -->
+  <header class="hero hero-slider" id="homeHeroSlider">
+    <!-- Rotating Trending Backdrops -->
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-slide active" style="background-image: url('https://image.tmdb.org/t/p/original/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg');"
+           data-id="dune2"
+           data-title="Dune: Part Two"
+           data-badge="Global Blockbuster"
+           data-badge-icon="bi-stars"
+           data-rating="9.4 (180K Reviews)"
+           data-synopsis="Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. Facing a choice between love and the fate of the universe, he must prevent a terrible future."
+           data-meta="2024 • 2h 46m • Sci-Fi / Adventure / Epic • PG-13"
+           data-type="movie"></div>
+
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/nb3xI8XI3w4pMVZ38VijbsyBqP4.jpg');"
+           data-id="oppenheimer"
+           data-title="Oppenheimer"
+           data-badge="7 Academy Awards"
+           data-badge-icon="bi-trophy-fill"
+           data-rating="9.2 (240K Reviews)"
+           data-synopsis="The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb during World War II, changing humanity's destiny forever."
+           data-meta="2023 • 3h 00m • Biography / History / Drama • R"
+           data-type="movie"></div>
+
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/gNdLJU9TxrpGx4dkZidjys3fyy0.jpg');"
+           data-id="interstellar"
+           data-title="Interstellar"
+           data-badge="Sci-Fi Masterpiece"
+           data-badge-icon="bi-award-fill"
+           data-rating="9.6 (310K Reviews)"
+           data-synopsis="When Earth becomes uninhabitable, ex-NASA pilot Joseph Cooper leads an interstellar expedition through a wormhole near Saturn in search of a new home for mankind."
+           data-meta="2014 • 2h 49m • Sci-Fi / Adventure / Drama • PG-13"
+           data-type="movie"></div>
+
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/nMKdUUepR0i5zn0y1T4CsSB5chy.jpg');"
+           data-id="the-dark-knight"
+           data-title="The Dark Knight"
+           data-badge="#1 Superhero Classic"
+           data-badge-icon="bi-fire"
+           data-rating="9.5 (420K Reviews)"
+           data-synopsis="Batman raises the stakes in his war on crime with the help of Lt. Jim Gordon and DA Harvey Dent, but finds himself tested against the psychopathic criminal mastermind known as the Joker."
+           data-meta="2008 • 2h 32m • Action / Crime / Thriller • PG-13"
+           data-type="movie"></div>
+
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg');"
+           data-id="shogun"
+           data-title="Shōgun"
+           data-badge="18 Emmy Awards Winner"
+           data-badge-icon="bi-trophy-fill"
+           data-rating="9.3 (110K Reviews)"
+           data-synopsis="Lord Yoshii Toranaga fights for his life as his enemies on the Council of Regents unite against him, while a mysterious European ship is found marooned in a nearby fishing village."
+           data-meta="2024 • 10 Episodes • Drama / History / Adventure • TV-MA"
+           data-type="series"></div>
+
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/49WJfeN0moxb9IPfGn8AIqMGskD.jpg');"
+           data-id="stranger-things"
+           data-title="Stranger Things"
+           data-badge="Streaming Phenomenon"
+           data-badge-icon="bi-lightning-charge-fill"
+           data-rating="9.1 (195K Reviews)"
+           data-synopsis="A new supernatural threat emerges from the Upside Down, revealing a gruesome mystery that, if solved, might finally put an end to the horrors terrorizing Hawkins."
+           data-meta="2022 • Season 4 • Sci-Fi / Horror / Drama • TV-14"
+           data-type="series"></div>
+    </div>
+
+    <!-- Multi-stage Dark Cinema Gradient Scrim -->
+    <div class="hero-scrim"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="flex items-center gap-2 mb-2" id="heroBadgeRow">
+          <span class="badge badge-accent" id="heroBadge"><i class="bi bi-stars"></i> Global Blockbuster</span>
+          <span class="badge badge-secondary"><i class="bi bi-badge-4k-fill"></i> 4K Ultra HD</span>
+          <span class="text-sm" style="color: var(--star-color);" id="heroRating"><i class="bi bi-star-fill"></i> 9.4 (180K Reviews)</span>
+        </div>
+        <h1 style="font-size: 3rem;" id="heroTitle">Dune: Part Two</h1>
+        <p id="heroSynopsis">Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. Facing a choice between love and the fate of the universe, he must prevent a terrible future.</p>
+        <div class="flex items-center gap-2 mb-3 text-sm text-secondary" id="heroMeta">
+          <span>2024</span>
+          <span>•</span>
+          <span>2h 46m</span>
+          <span>•</span>
+          <span>Sci-Fi / Adventure / Epic</span>
+          <span>•</span>
+          <span>PG-13</span>
+        </div>
+        <div class="hero-actions">
+          <a href="player.html?id=dune2" class="btn btn-primary btn-lg" id="heroPlayBtn"><i class="bi bi-play-fill"></i> Play Movie</a>
+          <a href="details.html?id=dune2" class="btn btn-outline btn-lg" id="heroDetailsBtn"><i class="bi bi-info-circle"></i> Details &amp; Cast</a>
+          <button class="btn btn-secondary btn-lg" id="heroListBtn"><i class="bi bi-plus-lg"></i> My List</button>
+        </div>
+
+        <!-- Ambient Trending Backdrop Indicator -->
+        <div class="hero-backdrop-caption">
+          <span class="caption-label"><i class="bi bi-stars"></i> Featured spotlight:</span>
+          <span class="caption-title" id="backdropTitle">Dune: Part Two</span>
+          <span class="caption-meta" id="backdropMeta">2024 · Sci-Fi</span>
+          <div class="hero-slide-dots" id="heroDots">
+            <span class="dot active" data-index="0" title="Dune: Part Two"></span>
+            <span class="dot" data-index="1" title="Oppenheimer"></span>
+            <span class="dot" data-index="2" title="Interstellar"></span>
+            <span class="dot" data-index="3" title="The Dark Knight"></span>
+            <span class="dot" data-index="4" title="Shōgun"></span>
+            <span class="dot" data-index="5" title="Stranger Things"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search & Category Bar with Bootstrap Icons -->
+  <section class="section" style="padding: 1.5rem 0 0.5rem;">
+    <div class="container">
+      <div class="flex justify-between items-center gap-2 flex-wrap">
+        <form action="movies.html" method="get" class="search-bar" style="margin: 0; flex: 1; max-width: 480px;">
+          <i class="bi bi-search search-icon"></i>
+          <input type="text" placeholder="Search real movies, series, actors, genres...">
+        </form>
+        <div class="genre-bar" style="padding: 0;">
+          <a href="home.html" class="genre-pill active">All</a>
+          <a href="movies.html" class="genre-pill">Action</a>
+          <a href="series.html" class="genre-pill">Sci-Fi</a>
+          <a href="movies.html" class="genre-pill">Thrillers</a>
+          <a href="series.html" class="genre-pill">Drama</a>
+          <a href="movies.html" class="genre-pill">Animation</a>
+          <a href="new-releases.html" class="genre-pill">Recently Added</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continue Watching Section with Real Movie Posters and Progress Bars -->
+  <section class="section" style="padding: 2rem 0;">
+    <div class="container">
+      <div class="flex justify-between items-center mb-2">
+        <div>
+          <h2 class="section-title">Continue Watching for Alexander</h2>
+          <p class="section-subtitle">Pick up right where you left off</p>
+        </div>
+        <a href="my-list.html" class="text-accent text-sm" style="font-weight: 600;">View Watchlist <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="scroll-row">
+        <!-- Continue 1: Dune 2 -->
+        <div class="poster-card continue-card">
+          <a href="player.html?id=dune2">
+            <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune: Part Two">
+          </a>
+          <div class="p-2" style="background: var(--bg-card);">
+            <div class="flex justify-between items-center text-sm">
+              <strong style="font-size: 0.88rem;">Dune: Part Two</strong>
+              <span class="text-muted" style="font-size: 0.75rem;">Film</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" style="width: 72%;"></div>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-muted text-sm" style="font-size: 0.75rem;">42m left</span>
+              <a href="player.html?id=dune2" class="text-accent text-sm" style="font-weight: 700;"><i class="bi bi-play-fill"></i> Resume</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Continue 2: Oppenheimer -->
+        <div class="poster-card continue-card">
+          <a href="player.html?id=oppenheimer">
+            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer">
+          </a>
+          <div class="p-2" style="background: var(--bg-card);">
+            <div class="flex justify-between items-center text-sm">
+              <strong style="font-size: 0.88rem;">Oppenheimer</strong>
+              <span class="text-muted" style="font-size: 0.75rem;">Film</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" style="width: 55%;"></div>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-muted text-sm" style="font-size: 0.75rem;">1h 18m left</span>
+              <a href="player.html?id=oppenheimer" class="text-accent text-sm" style="font-weight: 700;"><i class="bi bi-play-fill"></i> Resume</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Continue 3: Stranger Things -->
+        <div class="poster-card continue-card">
+          <a href="player.html?id=stranger-things">
+            <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" alt="Stranger Things">
+          </a>
+          <div class="p-2" style="background: var(--bg-card);">
+            <div class="flex justify-between items-center text-sm">
+              <strong style="font-size: 0.88rem;">Stranger Things</strong>
+              <span class="text-muted" style="font-size: 0.75rem;">S4:E7</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" style="width: 88%;"></div>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-muted text-sm" style="font-size: 0.75rem;">12m left</span>
+              <a href="player.html?id=stranger-things" class="text-accent text-sm" style="font-weight: 700;"><i class="bi bi-play-fill"></i> Resume</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Continue 4: Interstellar -->
+        <div class="poster-card continue-card">
+          <a href="player.html?id=interstellar">
+            <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar">
+          </a>
+          <div class="p-2" style="background: var(--bg-card);">
+            <div class="flex justify-between items-center text-sm">
+              <strong style="font-size: 0.88rem;">Interstellar</strong>
+              <span class="text-muted" style="font-size: 0.75rem;">Film</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" style="width: 35%;"></div>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-muted text-sm" style="font-size: 0.75rem;">1h 38m left</span>
+              <a href="player.html?id=interstellar" class="text-accent text-sm" style="font-weight: 700;"><i class="bi bi-play-fill"></i> Resume</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Continue 5: Breaking Bad -->
+        <div class="poster-card continue-card">
+          <a href="player.html?id=breaking-bad">
+            <img src="https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="Breaking Bad">
+          </a>
+          <div class="p-2" style="background: var(--bg-card);">
+            <div class="flex justify-between items-center text-sm">
+              <strong style="font-size: 0.88rem;">Breaking Bad</strong>
+              <span class="text-muted" style="font-size: 0.75rem;">S5:E14</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" style="width: 60%;"></div>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-muted text-sm" style="font-size: 0.75rem;">19m left</span>
+              <a href="player.html?id=breaking-bad" class="text-accent text-sm" style="font-weight: 700;"><i class="bi bi-play-fill"></i> Resume</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Continue 6: The Dark Knight -->
+        <div class="poster-card continue-card">
+          <a href="player.html?id=the-dark-knight">
+            <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight">
+          </a>
+          <div class="p-2" style="background: var(--bg-card);">
+            <div class="flex justify-between items-center text-sm">
+              <strong style="font-size: 0.88rem;">The Dark Knight</strong>
+              <span class="text-muted" style="font-size: 0.75rem;">Film</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" style="width: 45%;"></div>
+            </div>
+            <div class="flex justify-between items-center mt-1">
+              <span class="text-muted text-sm" style="font-size: 0.75rem;">1h 10m left</span>
+              <a href="player.html?id=the-dark-knight" class="text-accent text-sm" style="font-weight: 700;"><i class="bi bi-play-fill"></i> Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Now (Horizontal Scroll Row with Real Movie Posters) -->
+  <section class="section" style="padding: 2rem 0;">
+    <div class="container">
+      <div class="flex justify-between items-center mb-2">
+        <div>
+          <h2 class="section-title">Trending Now</h2>
+          <p class="section-subtitle">Top stream counts across all regional servers</p>
+        </div>
+        <a href="trending.html" class="btn btn-sm btn-outline">See Top 10 <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="scroll-row">
+        <!-- Shogun -->
+        <a href="details.html?id=shogun" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg" alt="Shōgun">
+          <div class="poster-overlay">
+            <h3>Shōgun</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.3</div>
+            <span class="genre-tag">Historical</span>
+            <span class="genre-tag">Drama</span>
+          </div>
+        </a>
+
+        <!-- Deadpool & Wolverine -->
+        <a href="details.html?id=deadpool-wolverine" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" alt="Deadpool &amp; Wolverine">
+          <div class="poster-overlay">
+            <h3>Deadpool &amp; Wolverine</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 8.9</div>
+            <span class="genre-tag">Action</span>
+            <span class="genre-tag">Comedy</span>
+          </div>
+        </a>
+
+        <!-- Gladiator II -->
+        <a href="details.html?id=gladiator-2" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg" alt="Gladiator II">
+          <div class="poster-overlay">
+            <h3>Gladiator II</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+            <span class="genre-tag">Epic</span>
+            <span class="genre-tag">Action</span>
+          </div>
+        </a>
+
+        <!-- The Batman -->
+        <a href="details.html?id=the-batman" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="The Batman">
+          <div class="poster-overlay">
+            <h3>The Batman</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 8.9</div>
+            <span class="genre-tag">Noir</span>
+            <span class="genre-tag">Crime</span>
+          </div>
+        </a>
+
+        <!-- Spider-Man Across the Spider-Verse -->
+        <a href="details.html?id=spider-verse" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Spider-Man: Across the Spider-Verse">
+          <div class="poster-overlay">
+            <h3>Across the Spider-Verse</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+            <span class="genre-tag">Animation</span>
+          </div>
+        </a>
+
+        <!-- Alien Romulus -->
+        <a href="details.html?id=alien-romulus" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg" alt="Alien: Romulus">
+          <div class="poster-overlay">
+            <h3>Alien: Romulus</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 8.8</div>
+            <span class="genre-tag">Horror</span>
+            <span class="genre-tag">Sci-Fi</span>
+          </div>
+        </a>
+
+        <!-- The Last of Us -->
+        <a href="details.html?id=the-last-of-us" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg" alt="The Last of Us">
+          <div class="poster-overlay">
+            <h3>The Last of Us</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.2</div>
+            <span class="genre-tag">Drama</span>
+            <span class="genre-tag">Survival</span>
+          </div>
+        </a>
+
+        <!-- John Wick 4 -->
+        <a href="details.html?id=john-wick-4" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="John Wick: Chapter 4">
+          <div class="poster-overlay">
+            <h3>John Wick: Chapter 4</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 8.9</div>
+            <span class="genre-tag">Action</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Picks For You (Grid 4 with Real Movies) -->
+  <section class="section" style="padding: 2rem 0; background: var(--bg-surface); border-radius: var(--radius); margin: 0 1rem;">
+    <div class="container">
+      <div class="flex justify-between items-center mb-3">
+        <div>
+          <h2 class="section-title">Top Picks Recommended for You</h2>
+          <p class="section-subtitle">Based on your viewing of modern sci-fi and cerebral thrillers</p>
+        </div>
+        <a href="movies.html" class="btn btn-sm btn-outline">Explore Movies <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="grid grid-4">
+        <!-- Pick 1: Blade Runner 2049 -->
+        <a href="details.html?id=blade-runner-2049" class="card" style="text-decoration: none;">
+          <img src="https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg" alt="Blade Runner 2049" class="card-img" style="height: 240px;">
+          <div class="card-body">
+            <div class="flex justify-between items-center mb-1">
+              <span class="badge badge-accent">98% Match</span>
+              <span style="color: var(--star-color); font-size: 0.85rem;"><i class="bi bi-star-fill"></i> 9.1</span>
+            </div>
+            <h3 class="card-title">Blade Runner 2049</h3>
+            <p class="card-subtitle">2017 • 2h 44m • Sci-Fi Noir</p>
+            <p class="card-text">Young Blade Runner K unearths a long-buried secret that leads him to track down former runner Rick Deckard.</p>
+          </div>
+        </a>
+
+        <!-- Pick 2: Inception -->
+        <a href="details.html?id=inception" class="card" style="text-decoration: none;">
+          <img src="https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg" alt="Inception" class="card-img" style="height: 240px;">
+          <div class="card-body">
+            <div class="flex justify-between items-center mb-1">
+              <span class="badge badge-secondary">97% Match</span>
+              <span style="color: var(--star-color); font-size: 0.85rem;"><i class="bi bi-star-fill"></i> 9.5</span>
+            </div>
+            <h3 class="card-title">Inception</h3>
+            <p class="card-subtitle">2010 • 2h 28m • Mind-Bending</p>
+            <p class="card-text">A thief who steals corporate secrets through dream-sharing technology is tasked with the inverse job of planting an idea.</p>
+          </div>
+        </a>
+
+        <!-- Pick 3: The Matrix -->
+        <a href="details.html?id=the-matrix" class="card" style="text-decoration: none;">
+          <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="The Matrix" class="card-img" style="height: 240px;">
+          <div class="card-body">
+            <div class="flex justify-between items-center mb-1">
+              <span class="badge badge-accent">99% Match</span>
+              <span style="color: var(--star-color); font-size: 0.85rem;"><i class="bi bi-star-fill"></i> 9.6</span>
+            </div>
+            <h3 class="card-title">The Matrix</h3>
+            <p class="card-subtitle">1999 • 2h 16m • Cyberpunk Classic</p>
+            <p class="card-text">When computer programmer Neo uncovers the truth about simulated reality, he joins an underground rebellion.</p>
+          </div>
+        </a>
+
+        <!-- Pick 4: Fight Club -->
+        <a href="details.html?id=fight-club" class="card" style="text-decoration: none;">
+          <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="Fight Club" class="card-img" style="height: 240px;">
+          <div class="card-body">
+            <div class="flex justify-between items-center mb-1">
+              <span class="badge badge-tertiary">95% Match</span>
+              <span style="color: var(--star-color); font-size: 0.85rem;"><i class="bi bi-star-fill"></i> 9.3</span>
+            </div>
+            <h3 class="card-title">Fight Club</h3>
+            <p class="card-subtitle">1999 • 2h 19m • Cult Drama</p>
+            <p class="card-text">An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- New On StreamFlix (Horizontal Scroll Row with Real Series Posters) -->
+  <section class="section" style="padding: 2rem 0;">
+    <div class="container">
+      <div class="flex justify-between items-center mb-2">
+        <div>
+          <h2 class="section-title">Acclaimed Original Series</h2>
+          <p class="section-subtitle">Stream complete seasons of the highest rated shows</p>
+        </div>
+        <a href="series.html" class="text-accent text-sm" style="font-weight: 600;">View All Series <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="scroll-row">
+        <!-- Arcane -->
+        <a href="details.html?id=arcane" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg" alt="Arcane">
+          <div class="poster-overlay">
+            <h3>Arcane</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.6</div>
+            <span class="genre-tag">Animation</span>
+            <span class="genre-tag">Sci-Fi</span>
+          </div>
+        </a>
+
+        <!-- Squid Game -->
+        <a href="details.html?id=squid-game" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg" alt="Squid Game">
+          <div class="poster-overlay">
+            <h3>Squid Game</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+            <span class="genre-tag">Thriller</span>
+            <span class="genre-tag">Drama</span>
+          </div>
+        </a>
+
+        <!-- Peaky Blinders -->
+        <a href="details.html?id=peaky-blinders" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg" alt="Peaky Blinders">
+          <div class="poster-overlay">
+            <h3>Peaky Blinders</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+            <span class="genre-tag">Crime</span>
+            <span class="genre-tag">Period</span>
+          </div>
+        </a>
+
+        <!-- Severance -->
+        <a href="details.html?id=severance" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/pPHpeI2X1qEd1CS1SeyrdhZ4qnT.jpg" alt="Severance">
+          <div class="poster-overlay">
+            <h3>Severance</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.3</div>
+            <span class="genre-tag">Mystery</span>
+            <span class="genre-tag">Sci-Fi</span>
+          </div>
+        </a>
+
+        <!-- The Witcher -->
+        <a href="details.html?id=the-witcher" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/AoGsDM02UVt0npBA8OvpDcZbaMi.jpg" alt="The Witcher">
+          <div class="poster-overlay">
+            <h3>The Witcher</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 8.8</div>
+            <span class="genre-tag">Fantasy</span>
+            <span class="genre-tag">Action</span>
+          </div>
+        </a>
+
+        <!-- Better Call Saul -->
+        <a href="details.html?id=better-call-saul" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg" alt="Better Call Saul">
+          <div class="poster-overlay">
+            <h3>Better Call Saul</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.5</div>
+            <span class="genre-tag">Drama</span>
+            <span class="genre-tag">Crime</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-globe"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="trending.html">Trending Now</a></li>
+          <li><a href="new-releases.html">New Releases</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="my-list.html">My Saved Watchlist</a></li>
+          <li><a href="account.html">Account &amp; Billing</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">FAQ</a></li>
+          <li><a href="help.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <!-- Hero Backdrop Ambient Slideshow Script -->
+  <script>
+    (function() {
+      const slides = document.querySelectorAll('#homeHeroSlider .hero-slide');
+      const dots = document.querySelectorAll('#homeHeroSlider .hero-slide-dots .dot');
+      const titleEl = document.getElementById('heroTitle');
+      const synopsisEl = document.getElementById('heroSynopsis');
+      const metaEl = document.getElementById('heroMeta');
+      const badgeEl = document.getElementById('heroBadge');
+      const ratingEl = document.getElementById('heroRating');
+      const playBtn = document.getElementById('heroPlayBtn');
+      const detailsBtn = document.getElementById('heroDetailsBtn');
+      const listBtn = document.getElementById('heroListBtn');
+      const capTitleEl = document.getElementById('backdropTitle');
+      const capMetaEl = document.getElementById('backdropMeta');
+
+      if (!slides.length) return;
+
+      let currentIndex = 0;
+      const intervalMs = 6500; // 6.5 seconds smooth relaxed rotation
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+
+        const cur = slides[index];
+        if (!cur) return;
+
+        const id = cur.dataset.id || 'dune2';
+        const title = cur.dataset.title || 'Featured Film';
+        const synopsis = cur.dataset.synopsis || '';
+        const meta = cur.dataset.meta || '';
+        const badge = cur.dataset.badge || 'Global Blockbuster';
+        const badgeIcon = cur.dataset.badgeIcon || 'bi-stars';
+        const rating = cur.dataset.rating || '9.4 (180K Reviews)';
+        const isSeries = cur.dataset.type === 'series';
+
+        if (titleEl) titleEl.textContent = title;
+        if (synopsisEl) synopsisEl.textContent = synopsis;
+        if (metaEl) {
+          metaEl.innerHTML = meta.split('•').map(s => `<span>${s.trim()}</span>`).join(' • ');
+        }
+        if (badgeEl) {
+          badgeEl.innerHTML = `<i class="bi ${badgeIcon}"></i> ${badge}`;
+        }
+        if (ratingEl) {
+          ratingEl.innerHTML = `<i class="bi bi-star-fill"></i> ${rating}`;
+        }
+        if (playBtn) {
+          playBtn.href = `player.html?id=${id}`;
+          playBtn.innerHTML = `<i class="bi bi-play-fill"></i> ${isSeries ? 'Play Episode 1' : 'Play Movie'}`;
+        }
+        if (detailsBtn) {
+          detailsBtn.href = `details.html?id=${id}`;
+        }
+        if (listBtn) {
+          function syncListBtn() {
+            if (window.SF && SF.Watchlist && SF.Watchlist.has(id)) {
+              listBtn.innerHTML = '<i class="bi bi-check-lg"></i> In My List';
+              listBtn.classList.remove('btn-secondary');
+              listBtn.classList.add('btn-primary');
+            } else {
+              listBtn.innerHTML = '<i class="bi bi-plus-lg"></i> My List';
+              listBtn.classList.remove('btn-primary');
+              listBtn.classList.add('btn-secondary');
+            }
+          }
+          syncListBtn();
+
+          listBtn.onclick = function(e) {
+            e.preventDefault();
+            if (window.SF && SF.Watchlist) {
+              const res = SF.Watchlist.toggle({
+                id: id,
+                title: title,
+                poster: cur.style.backgroundImage ? cur.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/, '$1') : '',
+                type: isSeries ? 'series' : 'movie'
+              });
+              if (window.SF.UI && SF.UI.toast) {
+                SF.UI.toast(res.message, res.success ? 'success' : 'info');
+              }
+              syncListBtn();
+              const myListLink = document.querySelector('.nav-links a[href="my-list.html"]');
+              if (myListLink && SF.Watchlist) {
+                myListLink.innerHTML = `My List <span style="display:inline-block; margin-left:4px; padding:1px 6px; font-size:0.75rem; background:var(--accent); color:#fff; border-radius:10px; font-weight:700;">${SF.Watchlist.count()}</span>`;
+              }
+            }
+          };
+        }
+        if (capTitleEl) capTitleEl.textContent = title;
+        if (capMetaEl) capMetaEl.textContent = meta.split('•').slice(0, 2).join(' · ');
+
+        // Trigger cinematic text animation
+        const heroContent = document.querySelector('#homeHeroSlider .hero-content');
+        if (heroContent) {
+          heroContent.classList.remove('slide-animate');
+          void heroContent.offsetWidth; // Force CSS reflow to replay keyframes
+          heroContent.classList.add('slide-animate');
+        }
+        const capEl = document.querySelector('#homeHeroSlider .hero-backdrop-caption');
+        if (capEl) {
+          capEl.classList.remove('animate-caption');
+          void capEl.offsetWidth;
+          capEl.classList.add('animate-caption');
+        }
+
+        currentIndex = index;
+      }
+
+      // Initial sync of button
+      showSlide(0);
+
+      let timer = setInterval(() => {
+        showSlide((currentIndex + 1) % slides.length);
+      }, intervalMs);
+
+      // Interactive click to switch to any featured slide immediately
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          clearInterval(timer);
+          showSlide(i);
+          timer = setInterval(() => {
+            showSlide((currentIndex + 1) % slides.length);
+          }, intervalMs);
+        });
+      });
+    })();
+  </script>
+
+  <script src="backend.js"></script>
+</body>
+</html>

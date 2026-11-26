@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dune: Part Two (2024) — StreamFlix Details</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .episode-card {
+      display: flex;
+      gap: 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--edge);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--specular), var(--shadow-1);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      transition: var(--transition);
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+    .episode-card:hover {
+      transform: translateX(6px);
+      border-color: var(--edge-strong);
+      box-shadow: var(--specular), var(--shadow-3);
+    }
+    .episode-thumb {
+      width: 140px;
+      height: 85px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="profiles.html" class="btn btn-sm btn-outline"><i class="bi bi-people-fill"></i> Profiles</a>
+          <a href="account.html" class="btn btn-sm btn-primary"><i class="bi bi-person-circle"></i> Account</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Backdrop Hero Section with Real Dune 2 Backdrop -->
+  <header class="backdrop-hero" style="background-image: url('https://image.tmdb.org/t/p/original/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg');">
+    <div class="backdrop-content">
+      <div class="backdrop-poster">
+        <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune: Part Two">
+      </div>
+      <div class="backdrop-info">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="badge badge-accent"><i class="bi bi-trophy-fill"></i> Multi-Oscar Winner</span>
+          <span class="badge badge-secondary"><i class="bi bi-badge-4k-fill"></i> Ultra HD 4K</span>
+          <span class="badge badge-tertiary"><i class="bi bi-soundwave"></i> Dolby Atmos</span>
+        </div>
+        <h1>Dune: Part Two (2024)</h1>
+        
+        <div class="backdrop-meta">
+          <span class="meta-badge">PG-13</span>
+          <span>2024</span>
+          <span>2h 46m</span>
+          <span style="color: var(--star-color); font-weight: 700;"><i class="bi bi-star-fill"></i> 9.4 / 10 (180,000 votes)</span>
+          <span>Sci-Fi • Adventure • Epic • Action</span>
+        </div>
+
+        <p class="card-text mb-3" style="max-width: 780px; font-size: 1rem; color: #d0d7de;">
+          Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. Facing a fateful choice between the love of his life and the destiny of the known universe, he endeavors to prevent a catastrophic future only he can foresee.
+        </p>
+
+        <div class="flex gap-2 flex-wrap items-center">
+          <a href="player.html" class="btn btn-primary btn-lg"><i class="bi bi-play-fill"></i> Play Feature Film</a>
+          <a href="player.html" class="btn btn-outline"><i class="bi bi-film"></i> Official Trailer</a>
+          <a href="my-list.html" class="btn btn-secondary"><i class="bi bi-plus-lg"></i> Add to My List</a>
+          <a href="player.html" class="btn btn-icon" title="Download Offline"><i class="bi bi-download"></i></a>
+          <a href="#reviews" class="btn btn-icon" title="User Reviews"><i class="bi bi-chat-text-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="section" style="padding-top: 2rem;">
+    <div class="container">
+      
+      <!-- Cast & Creators Section with Real Actors -->
+      <section class="mb-4">
+        <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1.25rem;"><i class="bi bi-people-fill"></i> Leading Cast &amp; Director</h2>
+        <div class="cast-grid">
+          
+          <div class="cast-item">
+            <div class="cast-avatar">
+              <img src="https://image.tmdb.org/t/p/w300/BE2sdjpgsa2rNTFa66f7upkaOP.jpg" alt="Timothée Chalamet">
+            </div>
+            <div class="cast-name">Timothée Chalamet</div>
+            <div class="cast-role">as Paul Atreides</div>
+          </div>
+
+          <div class="cast-item">
+            <div class="cast-avatar">
+              <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Zendaya-byPhilipRomano.jpg/330px-Zendaya-byPhilipRomano.jpg" alt="Zendaya">
+            </div>
+            <div class="cast-name">Zendaya</div>
+            <div class="cast-role">as Chani</div>
+          </div>
+
+          <div class="cast-item">
+            <div class="cast-avatar">
+              <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Florence_Pugh_2026.jpg/330px-Florence_Pugh_2026.jpg" alt="Florence Pugh">
+            </div>
+            <div class="cast-name">Florence Pugh</div>
+            <div class="cast-role">as Princess Irulan</div>
+          </div>
+
+          <div class="cast-item">
+            <div class="cast-avatar">
+              <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Austin_Butler_at_the_2025_Cannes_Film_Festival_02.jpg/330px-Austin_Butler_at_the_2025_Cannes_Film_Festival_02.jpg" alt="Austin Butler">
+            </div>
+            <div class="cast-name">Austin Butler</div>
+            <div class="cast-role">as Feyd-Rautha</div>
+          </div>
+
+          <div class="cast-item">
+            <div class="cast-avatar">
+              <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Javier_Bardem_-_Bunker_-_TIFF_2026-12.jpg/330px-Javier_Bardem_-_Bunker_-_TIFF_2026-12.jpg" alt="Javier Bardem">
+            </div>
+            <div class="cast-name">Javier Bardem</div>
+            <div class="cast-role">as Stilgar</div>
+          </div>
+
+          <div class="cast-item">
+            <div class="cast-avatar">
+              <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/DVilleneuveRFH121024_%2812_of_23%29_%2854061976489%29_%28cropped%29.jpg/330px-DVilleneuveRFH121024_%2812_of_23%29_%2854061976489%29_%28cropped%29.jpg" alt="Denis Villeneuve">
+            </div>
+            <div class="cast-name">Denis Villeneuve</div>
+            <div class="cast-role">Director &amp; Co-Writer</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CSS-Only Tabs: Key Chapters, More Like This, Details -->
+      <section class="tabs-container mb-4">
+        <input type="radio" name="details-tabs" id="tab1" checked>
+        <input type="radio" name="details-tabs" id="tab2">
+        <input type="radio" name="details-tabs" id="tab3">
+
+        <div class="tab-labels">
+          <label for="tab1"><i class="bi bi-bookmark-play-fill"></i> Chapters &amp; Scenes</label>
+          <label for="tab2"><i class="bi bi-film"></i> More Like This</label>
+          <label for="tab3"><i class="bi bi-card-checklist"></i> Technical Specifications</label>
+        </div>
+
+        <div class="tab-panels">
+          
+          <!-- Tab 1: Chapters -->
+          <div class="tab-panel">
+            <div class="flex justify-between items-center mb-3">
+              <h3 style="font-size: 1.15rem;">Key Feature Chapters (Direct Playback)</h3>
+              <span class="text-sm text-muted">Master Audio: Dolby Atmos 7.1.4</span>
+            </div>
+
+            <!-- Chapter 1 -->
+            <a href="player.html?chapter=1&t=15" class="episode-card">
+              <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Chapter 1" class="episode-thumb">
+              <div style="flex: 1;">
+                <div class="flex justify-between items-center">
+                  <h4 style="font-size: 1rem; margin-bottom: 0.2rem;">Chapter 1: The Desert Trek &amp; Harkonnen Ambush</h4>
+                  <span class="text-sm text-muted">26m</span>
+                </div>
+                <p class="text-sm text-secondary">Paul and Jessica cross the northern dunes with Stilgar's troop, engaging Harkonnen anti-gravity spotters.</p>
+              </div>
+              <span class="btn btn-sm btn-primary"><i class="bi bi-play-fill"></i> Jump</span>
+            </a>
+
+            <!-- Chapter 2 -->
+            <a href="player.html?chapter=2&t=45" class="episode-card">
+              <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Chapter 2" class="episode-thumb">
+              <div style="flex: 1;">
+                <div class="flex justify-between items-center">
+                  <h4 style="font-size: 1rem; margin-bottom: 0.2rem;">Chapter 2: Riding the Grandfather Sandworm</h4>
+                  <span class="text-sm text-muted">45m</span>
+                </div>
+                <p class="text-sm text-secondary">Paul faces the ancient rite of passage, summoning and mounting the largest sandworm ever witnessed by the Sietch.</p>
+              </div>
+              <span class="btn btn-sm btn-outline"><i class="bi bi-play-fill"></i> Jump</span>
+            </a>
+
+            <!-- Chapter 3 -->
+            <a href="player.html?chapter=3&t=75" class="episode-card">
+              <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Chapter 3" class="episode-thumb">
+              <div style="flex: 1;">
+                <div class="flex justify-between items-center">
+                  <h4 style="font-size: 1rem; margin-bottom: 0.2rem;">Chapter 3: The Gladiator Arena of Giedi Prime</h4>
+                  <span class="text-sm text-muted">1h 14m</span>
+                </div>
+                <p class="text-sm text-secondary">Feyd-Rautha demonstrates his ruthless lethality in monochrome gladiatorial combat to mark his coming of age.</p>
+              </div>
+              <span class="btn btn-sm btn-outline"><i class="bi bi-play-fill"></i> Jump</span>
+            </a>
+
+            <!-- Chapter 4 -->
+            <a href="player.html?chapter=4&t=108" class="episode-card">
+              <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="Chapter 4" class="episode-thumb">
+              <div style="flex: 1;">
+                <div class="flex justify-between items-center">
+                  <h4 style="font-size: 1rem; margin-bottom: 0.2rem;">Chapter 4: The Water of Life Awakening</h4>
+                  <span class="text-sm text-muted">1h 48m</span>
+                </div>
+                <p class="text-sm text-secondary">Journeying to the southern sietches, Paul drinks the sacred poison to awaken all ancestral memories across millennia.</p>
+              </div>
+              <span class="btn btn-sm btn-outline"><i class="bi bi-play-fill"></i> Jump</span>
+            </a>
+
+            <!-- Chapter 5 -->
+            <a href="player.html?chapter=5&t=138" class="episode-card">
+              <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="Chapter 5" class="episode-thumb">
+              <div style="flex: 1;">
+                <div class="flex justify-between items-center">
+                  <h4 style="font-size: 1rem; margin-bottom: 0.2rem;">Chapter 5: The Battle of Arrakeen &amp; Emperor's Fall</h4>
+                  <span class="text-sm text-muted">2h 18m</span>
+                </div>
+                <p class="text-sm text-secondary">Atomic detonations breach the shield wall, unleashing the Fremen cavalry upon the Sardaukar legions.</p>
+              </div>
+              <span class="btn btn-sm btn-outline"><i class="bi bi-play-fill"></i> Jump</span>
+            </a>
+          </div>
+
+          <!-- Tab 2: More Like This (Real Posters) -->
+          <div class="tab-panel">
+            <div class="grid grid-4">
+              <a href="details.html?id=blade-runner-2049" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg" alt="Blade Runner 2049">
+                <div class="poster-overlay">
+                  <h3>Blade Runner 2049</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+                  <span class="genre-tag">Denis Villeneuve</span>
+                </div>
+              </a>
+              <a href="details.html?id=interstellar" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar">
+                <div class="poster-overlay">
+                  <h3>Interstellar</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.6</div>
+                  <span class="genre-tag">Space Epic</span>
+                </div>
+              </a>
+              <a href="details.html?id=oppenheimer" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer">
+                <div class="poster-overlay">
+                  <h3>Oppenheimer</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.2</div>
+                  <span class="genre-tag">Historical Epic</span>
+                </div>
+              </a>
+              <a href="details.html?id=the-matrix" class="poster-card">
+                <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="The Matrix">
+                <div class="poster-overlay">
+                  <h3>The Matrix</h3>
+                  <div class="rating"><i class="bi bi-star-fill"></i> 9.6</div>
+                  <span class="genre-tag">Chosen One</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tab 3: Details -->
+          <div class="tab-panel">
+            <div class="grid grid-2" style="gap: 2rem;">
+              <div>
+                <h4 class="mb-2"><i class="bi bi-camera-reels-fill"></i> Production &amp; Release Credits</h4>
+                <ul style="line-height: 2; font-size: 0.92rem; color: var(--text-secondary);">
+                  <li><strong>Director:</strong> Denis Villeneuve</li>
+                  <li><strong>Screenplay:</strong> Denis Villeneuve &amp; Jon Spaihts</li>
+                  <li><strong>Based on Novel by:</strong> Frank Herbert</li>
+                  <li><strong>Cinematographer:</strong> Greig Fraser (ARRI Alexa LF IMAX)</li>
+                  <li><strong>Original Score:</strong> Hans Zimmer</li>
+                  <li><strong>Filming Locations:</strong> Jordan, Abu Dhabi, Budapest, Italy</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="mb-2"><i class="bi bi-soundwave"></i> Audio &amp; Accessibility Specs</h4>
+                <ul style="line-height: 2; font-size: 0.92rem; color: var(--text-secondary);">
+                  <li><strong>Video Standards:</strong> 4K Ultra HD (2160p), HDR10+, Dolby Vision</li>
+                  <li><strong>Spatial Audio:</strong> Dolby Atmos 7.1.4, Dolby Digital 5.1</li>
+                  <li><strong>Audio Tracks:</strong> English [Original], Spanish, German, French, Japanese</li>
+                  <li><strong>Subtitles:</strong> English [CC], Spanish, French, German, Arabic, Japanese</li>
+                  <li><strong>Content Rating:</strong> PG-13 for sequences of strong violence and language</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- User Reviews Section with Bootstrap Icons -->
+      <section id="reviews" class="mb-4">
+        <div class="flex justify-between items-center mb-3">
+          <div>
+            <h2 class="section-title" style="font-size: 1.5rem;">Audience Reviews &amp; Ratings</h2>
+            <p class="text-sm text-muted">Join over 2,400 user discussion threads</p>
+          </div>
+          <a href="player.html" class="btn btn-sm btn-primary"><i class="bi bi-pencil-fill"></i> Leave a Review</a>
+        </div>
+
+        <div class="comment-card">
+          <div class="comment-avatar"><i class="bi bi-film"></i></div>
+          <div class="comment-body">
+            <div class="flex justify-between items-center">
+              <h4>Marcus Drake</h4>
+              <span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 10/10</span>
+            </div>
+            <div class="comment-date">Reviewed October 24, 2026 • Verified Cinema Subscriber</div>
+            <p>"A monumental cinematic achievement. The sound design during the sandworm ride and the sheer scale of the final battle scene on Arrakis are completely unrivaled. 10/10 masterpiece!"</p>
+          </div>
+        </div>
+
+        <div class="comment-card">
+          <div class="comment-avatar"><i class="bi bi-soundwave"></i></div>
+          <div class="comment-body">
+            <div class="flex justify-between items-center">
+              <h4>Sofia Al-Mansoor</h4>
+              <span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 10/10</span>
+            </div>
+            <div class="comment-date">Reviewed October 20, 2026 • Verified Subscriber</div>
+            <p>"Hans Zimmer's score paired with Greig Fraser's photography sets a brand new benchmark for sci-fi cinema. Timothée Chalamet's transformation from exiled prince to messianic emperor is chilling."</p>
+          </div>
+        </div>
+
+        <div class="comment-card">
+          <div class="comment-avatar"><i class="bi bi-award-fill"></i></div>
+          <div class="comment-body">
+            <div class="flex justify-between items-center">
+              <h4>Cinephile Insider</h4>
+              <span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 9.5/10</span>
+            </div>
+            <div class="comment-date">Reviewed October 15, 2026 • Top Contributor</div>
+            <p>"Villeneuve has delivered our generation's Empire Strikes Back or Lord of the Rings: The Two Towers. Pristine 4K HDR bitrate on StreamFlix makes it look identical to the theater."</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-globe"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="trending.html">Trending Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="my-list.html">My Saved Watchlist</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">FAQ</a></li>
+          <li><a href="help.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>

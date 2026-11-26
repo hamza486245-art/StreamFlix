@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Series &amp; Shows — StreamFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html" class="active">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="profiles.html" class="btn btn-sm btn-outline"><i class="bi bi-people-fill"></i> Profiles</a>
+          <a href="account.html" class="btn btn-sm btn-primary"><i class="bi bi-person-circle"></i> Account</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-3 flex-wrap gap-2">
+        <div>
+          <span class="badge badge-secondary mb-1"><i class="bi bi-tv"></i> Episodic Cinema</span>
+          <h1 class="section-title">TV Series &amp; Shows</h1>
+          <p class="section-subtitle" style="margin-bottom: 0;">Binge-worthy drama, gripping mysteries, sci-fi epics, and award-winning series.</p>
+        </div>
+        <form action="series.html" method="get" class="search-bar" style="margin: 0; min-width: 320px;">
+          <i class="bi bi-search search-icon"></i>
+          <input type="text" placeholder="Search real TV shows by title, network...">
+        </form>
+      </div>
+
+      <!-- Genre Pills with Icons -->
+      <div class="genre-bar mb-4">
+        <a href="series.html" class="genre-pill active"><i class="bi bi-collection-play-fill"></i> All Shows</a>
+        <a href="#drama" class="genre-pill"><i class="bi bi-award-fill"></i> Prestige Drama</a>
+        <a href="#scifi" class="genre-pill"><i class="bi bi-rocket-takeoff-fill"></i> Sci-Fi &amp; Fantasy</a>
+        <a href="#crime" class="genre-pill"><i class="bi bi-fingerprint"></i> Crime &amp; Mystery</a>
+        <a href="#thriller" class="genre-pill"><i class="bi bi-eye-fill"></i> Thriller</a>
+        <a href="#animation" class="genre-pill"><i class="bi bi-palette-fill"></i> Anime Series</a>
+        <a href="#docu" class="genre-pill"><i class="bi bi-camera-reels-fill"></i> Docuseries</a>
+      </div>
+
+      <!-- 16 Real TV Series Grid (grid-4) -->
+      <div class="grid grid-4">
+        
+        <!-- Series 1: Stranger Things -->
+        <a href="details.html?id=stranger-things" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" alt="Stranger Things">
+          <div class="poster-overlay">
+            <h3>Stranger Things</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+            <span class="genre-tag">4 Seasons</span>
+            <span class="genre-tag">Sci-Fi</span>
+          </div>
+        </a>
+
+        <!-- Series 2: Breaking Bad -->
+        <a href="details.html?id=breaking-bad" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="Breaking Bad">
+          <div class="poster-overlay">
+            <h3>Breaking Bad</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.7</div>
+            <span class="genre-tag">5 Seasons</span>
+            <span class="genre-tag">Crime Masterpiece</span>
+          </div>
+        </a>
+
+        <!-- Series 3: The Last of Us -->
+        <a href="details.html?id=the-last-of-us" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg" alt="The Last of Us">
+          <div class="poster-overlay">
+            <h3>The Last of Us</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.2</div>
+            <span class="genre-tag">1 Season</span>
+            <span class="genre-tag">Post-Apocalyptic</span>
+          </div>
+        </a>
+
+        <!-- Series 4: Game of Thrones -->
+        <a href="details.html?id=game-of-thrones" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg" alt="Game of Thrones">
+          <div class="poster-overlay">
+            <h3>Game of Thrones</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+            <span class="genre-tag">8 Seasons</span>
+            <span class="genre-tag">Fantasy Epic</span>
+          </div>
+        </a>
+
+        <!-- Series 5: The Mandalorian -->
+        <a href="details.html?id=the-mandalorian" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg" alt="The Mandalorian">
+          <div class="poster-overlay">
+            <h3>The Mandalorian</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.0</div>
+            <span class="genre-tag">3 Seasons</span>
+            <span class="genre-tag">Space Western</span>
+          </div>
+        </a>
+
+        <!-- Series 6: Shogun -->
+        <a href="details.html?id=shogun" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg" alt="Shōgun">
+          <div class="poster-overlay">
+            <h3>Shōgun</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.3</div>
+            <span class="genre-tag">1 Season</span>
+            <span class="genre-tag">Historical Epic</span>
+          </div>
+        </a>
+
+        <!-- Series 7: Arcane -->
+        <a href="details.html?id=arcane" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg" alt="Arcane">
+          <div class="poster-overlay">
+            <h3>Arcane</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.6</div>
+            <span class="genre-tag">2 Seasons</span>
+            <span class="genre-tag">Steampunk</span>
+          </div>
+        </a>
+
+        <!-- Series 8: Squid Game -->
+        <a href="details.html?id=squid-game" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg" alt="Squid Game">
+          <div class="poster-overlay">
+            <h3>Squid Game</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.1</div>
+            <span class="genre-tag">2 Seasons</span>
+            <span class="genre-tag">Thriller</span>
+          </div>
+        </a>
+
+        <!-- Series 9: Peaky Blinders -->
+        <a href="details.html?id=peaky-blinders" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg" alt="Peaky Blinders">
+          <div class="poster-overlay">
+            <h3>Peaky Blinders</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.4</div>
+            <span class="genre-tag">6 Seasons</span>
+            <span class="genre-tag">Period Gangster</span>
+          </div>
+        </a>
+
+        <!-- Series 10: Better Call Saul -->
+        <a href="details.html?id=better-call-saul" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg" alt="Better Call Saul">
+          <div class="poster-overlay">
+            <h3>Better Call Saul</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.5</div>
+            <span class="genre-tag">6 Seasons</span>
+            <span class="genre-tag">Legal Drama</span>
+          </div>
+        </a>
+
+        <!-- Series 11: Chernobyl -->
+        <a href="details.html?id=chernobyl" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg" alt="Chernobyl">
+          <div class="poster-overlay">
+            <h3>Chernobyl</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.8</div>
+            <span class="genre-tag">Miniseries</span>
+            <span class="genre-tag">Historical</span>
+          </div>
+        </a>
+
+        <!-- Series 12: Severance -->
+        <a href="details.html?id=severance" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/pPHpeI2X1qEd1CS1SeyrdhZ4qnT.jpg" alt="Severance">
+          <div class="poster-overlay">
+            <h3>Severance</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.3</div>
+            <span class="genre-tag">2 Seasons</span>
+            <span class="genre-tag">Mystery Thriller</span>
+          </div>
+        </a>
+
+        <!-- Series 13: The Witcher -->
+        <a href="details.html?id=the-witcher" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/AoGsDM02UVt0npBA8OvpDcZbaMi.jpg" alt="The Witcher">
+          <div class="poster-overlay">
+            <h3>The Witcher</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 8.8</div>
+            <span class="genre-tag">3 Seasons</span>
+            <span class="genre-tag">Fantasy</span>
+          </div>
+        </a>
+
+        <!-- Series 14: Succession -->
+        <a href="details.html?id=succession" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/hS62paPx7Ls3c6voXcXJzJNaTG4.jpg" alt="Succession">
+          <div class="poster-overlay">
+            <h3>Succession</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.5</div>
+            <span class="genre-tag">4 Seasons</span>
+            <span class="genre-tag">Satirical Drama</span>
+          </div>
+        </a>
+
+        <!-- Series 15: The Boys -->
+        <a href="details.html?id=the-boys" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/2zmTngn1tYC1AvfnrFLhxeD82hz.jpg" alt="The Boys">
+          <div class="poster-overlay">
+            <h3>The Boys</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.2</div>
+            <span class="genre-tag">4 Seasons</span>
+            <span class="genre-tag">Superhero Satire</span>
+          </div>
+        </a>
+
+        <!-- Series 16: Dark -->
+        <a href="details.html?id=dark" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/wiiyc3m6HKaQhFBYeuM7ySCNQsG.jpg" alt="Dark">
+          <div class="poster-overlay">
+            <h3>Dark</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i> 9.5</div>
+            <span class="genre-tag">3 Seasons</span>
+            <span class="genre-tag">Time Loop Mystery</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Load More -->
+      <div class="text-center mt-4">
+        <a href="series.html" class="btn btn-outline btn-lg">Load More Real Series <i class="bi bi-chevron-down"></i></a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Website"><i class="bi bi-globe"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="trending.html">Trending Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="my-list.html">My Saved Watchlist</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">FAQ</a></li>
+          <li><a href="help.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>

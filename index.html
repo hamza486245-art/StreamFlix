@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamFlix — Stream movies &amp; TV shows anywhere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My list</a>
+        <div class="nav-auth">
+          <a href="login.html" class="btn btn-sm btn-outline"><i class="bi bi-box-arrow-in-right"></i> Log in</a>
+          <a href="signup.html" class="btn btn-sm btn-primary"><i class="bi bi-person-plus-fill"></i> Sign up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section — Ambient Trending Movies Slideshow -->
+  <header class="hero hero-slider" id="heroSlider">
+    <!-- Rotating Trending Backdrops -->
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-slide active" style="background-image: url('https://image.tmdb.org/t/p/original/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg');" data-title="Dune: Part Two" data-year="2024" data-genre="Sci-Fi"></div>
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/nb3xI8XI3w4pMVZ38VijbsyBqP4.jpg');" data-title="Oppenheimer" data-year="2023" data-genre="Biography / Drama"></div>
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/nMKdUUepR0i5zn0y1T4CsSB5chy.jpg');" data-title="The Dark Knight" data-year="2008" data-genre="Action / Crime"></div>
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/hZkgoQYus5vegHoetLkCJzb17zJ.jpg');" data-title="John Wick: Chapter 4" data-year="2023" data-genre="Action / Thriller"></div>
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg');" data-title="Inception" data-year="2010" data-genre="Sci-Fi / Action"></div>
+      <div class="hero-slide" style="background-image: url('https://image.tmdb.org/t/p/original/gNdLJU9TxrpGx4dkZidjys3fyy0.jpg');" data-title="Blade Runner 2049" data-year="2017" data-genre="Sci-Fi / Mystery"></div>
+    </div>
+
+    <!-- Multi-stage Dark Cinema Gradient Scrim -->
+    <div class="hero-scrim"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-pill-badge mb-2">
+          <i class="bi bi-film"></i> Now Streaming Blockbusters in 4K HDR
+        </div>
+        <h1>Cinema-grade streaming, <span>without the ads.</span></h1>
+        <p>Watch the films and series that matter — in 4K HDR with Dolby Atmos. No commercial breaks. Cancel any time.</p>
+        <div class="hero-actions">
+          <a href="signup.html" class="btn btn-primary btn-lg"><i class="bi bi-play-circle-fill"></i> Start free trial</a>
+          <a href="plans.html" class="btn btn-ghost btn-lg">See plans</a>
+        </div>
+
+        <!-- Ambient Trending Backdrop Indicator -->
+        <div class="hero-backdrop-caption">
+          <span class="caption-label"><i class="bi bi-stars"></i> Trending backdrop:</span>
+          <span class="caption-title" id="backdropTitle">Dune: Part Two</span>
+          <span class="caption-meta" id="backdropMeta">2024 · Sci-Fi</span>
+          <div class="hero-slide-dots" id="heroDots">
+            <span class="dot active" data-index="0" title="Dune: Part Two"></span>
+            <span class="dot" data-index="1" title="Oppenheimer"></span>
+            <span class="dot" data-index="2" title="The Dark Knight"></span>
+            <span class="dot" data-index="3" title="John Wick: Chapter 4"></span>
+            <span class="dot" data-index="4" title="Inception"></span>
+            <span class="dot" data-index="5" title="Blade Runner 2049"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats Bar — real product facts only, no unverified subscriber count -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-number">15,000+</div>
+          <div class="stat-label">Titles in the catalog</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4K HDR</div>
+          <div class="stat-label">Maximum picture quality</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Profiles per account</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">190+</div>
+          <div class="stat-label">Countries available</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section — no icon tiles, differentiated copy, left-aligned heading -->
+  <section class="section">
+    <div class="container">
+      <div class="features-header">
+        <h2 class="section-title">Built for cinema at home</h2>
+        <p class="section-subtitle">Every technical decision starts with one question: does this make the film better?</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>Vast exclusive catalog</h3>
+          <p>From theatrical blockbusters to indie cinema gems and award-winning originals — updated every Friday.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Watch on any device</h3>
+          <p>Stream on Smart TVs, PlayStation, Xbox, Apple TV, iPad, tablets, laptops, and mobiles — with instant sync across all of them.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Offline downloads</h3>
+          <p>Save your favourite films and shows to watch while commuting or travelling — no mobile data needed.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Multi-user profiles</h3>
+          <p>Up to 5 individual profiles per account, with tailored watchlists and PIN-protected parental controls.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Dolby Atmos spatial audio</h3>
+          <p>Studio-grade Dolby Atmos 3D audio on every supported title. The sound is as considered as the picture.</p>
+        </div>
+        <div class="feature-item">
+          <h3>100% ad-free</h3>
+          <p>No commercial breaks, no banner ads. The story runs from opening title to end credits without interruption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Preview — Trending Blockbusters -->
+  <section class="section trending-section">
+    <div class="container">
+      <div class="flex justify-between items-center mb-2">
+        <div>
+          <h2 class="section-title">Trending blockbusters</h2>
+          <p class="section-subtitle">Box-office and critically acclaimed hits streaming right now</p>
+        </div>
+        <a href="home.html" class="btn btn-sm btn-outline">Browse all <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="scroll-row">
+        <a href="details.html?id=dune2" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune: Part Two">
+          <div class="poster-overlay">
+            <h3>Dune: Part Two</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 9.4</div>
+            <span class="genre-tag">Sci-Fi</span>
+            <span class="genre-tag">4K HDR</span>
+          </div>
+        </a>
+
+        <a href="details.html?id=oppenheimer" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer">
+          <div class="poster-overlay">
+            <h3>Oppenheimer</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 9.2</div>
+            <span class="genre-tag">Biography</span>
+            <span class="genre-tag">Drama</span>
+          </div>
+        </a>
+
+        <a href="details.html?id=interstellar" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar">
+          <div class="poster-overlay">
+            <h3>Interstellar</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 9.6</div>
+            <span class="genre-tag">Sci-Fi</span>
+            <span class="genre-tag">Space</span>
+          </div>
+        </a>
+
+        <a href="details.html?id=the-dark-knight" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight">
+          <div class="poster-overlay">
+            <h3>The Dark Knight</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 9.5</div>
+            <span class="genre-tag">Action</span>
+            <span class="genre-tag">Crime</span>
+          </div>
+        </a>
+
+        <a href="details.html?id=stranger-things" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" alt="Stranger Things">
+          <div class="poster-overlay">
+            <h3>Stranger Things</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 9.1</div>
+            <span class="genre-tag">Series</span>
+            <span class="genre-tag">Sci-Fi</span>
+          </div>
+        </a>
+
+        <a href="details.html?id=shogun" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg" alt="Shōgun">
+          <div class="poster-overlay">
+            <h3>Shōgun</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 9.3</div>
+            <span class="genre-tag">Drama</span>
+            <span class="genre-tag">History</span>
+          </div>
+        </a>
+
+        <a href="details.html?id=john-wick-4" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="John Wick: Chapter 4">
+          <div class="poster-overlay">
+            <h3>John Wick: Chapter 4</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 8.9</div>
+            <span class="genre-tag">Action</span>
+            <span class="genre-tag">Thriller</span>
+          </div>
+        </a>
+
+        <a href="details.html?id=spider-verse" class="poster-card">
+          <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Across the Spider-Verse">
+          <div class="poster-overlay">
+            <h3>Across the Spider-Verse</h3>
+            <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> 9.4</div>
+            <span class="genre-tag">Animation</span>
+            <span class="genre-tag">Action</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Member Reviews — honest framing, name initials only, varied star ratings -->
+  <section class="section">
+    <div class="container">
+      <div class="features-header">
+        <h2 class="section-title">What our members say</h2>
+        <p class="section-subtitle">Collected from member feedback across our community.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="comment-avatar"><i class="bi bi-person-workspace"></i></div>
+            <div>
+              <h4>Marcus V.</h4>
+              <span class="text-muted text-sm">Member since 2022</span>
+            </div>
+          </div>
+          <div class="review-stars mb-2">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+          </div>
+          <p class="card-text">"The 4K HDR playback is better than any service I've tried. The dark interface makes late-night browsing easy on the eyes."</p>
+        </div>
+
+        <div class="card p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="comment-avatar"><i class="bi bi-palette-fill"></i></div>
+            <div>
+              <h4>Elena R.</h4>
+              <span class="text-muted text-sm">Member since 2023</span>
+            </div>
+          </div>
+          <div class="review-stars mb-2">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+          </div>
+          <p class="card-text">"Great catalog of international films. Multi-profile switching is fast and the parental PIN controls actually work."</p>
+        </div>
+
+        <div class="card p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="comment-avatar"><i class="bi bi-headphones"></i></div>
+            <div>
+              <h4>Julian C.</h4>
+              <span class="text-muted text-sm">Member since 2021</span>
+            </div>
+          </div>
+          <div class="review-stars mb-2">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="card-text">"Dolby Atmos on a good home theatre setup is genuinely impressive. Offline downloads worked perfectly on a long-haul flight."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Preview -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container" style="max-width: 900px;">
+      <div class="features-header">
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="section-subtitle">Common questions about StreamFlix memberships.</p>
+      </div>
+
+      <details open>
+        <summary>What is StreamFlix?</summary>
+        <div class="accordion-content">
+          StreamFlix is a subscription video-on-demand service offering thousands of award-winning movies, TV series, and documentaries in 4K Ultra HD.
+        </div>
+      </details>
+
+      <details>
+        <summary>How much does StreamFlix cost?</summary>
+        <div class="accordion-content">
+          Plans start at $8.99/month for Basic, $13.99/month for Standard (Full HD, 2 screens), and $17.99/month for Premium (4K HDR, Dolby Atmos, 4 screens). No contracts — cancel any time.
+        </div>
+      </details>
+
+      <details>
+        <summary>Where can I watch?</summary>
+        <div class="accordion-content">
+          Stream on the web or through Smart TVs, phones, tablets, or consoles. Sign in to watch on any supported device.
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I download and watch offline?</summary>
+        <div class="accordion-content">
+          Standard and Premium plans include offline downloads on iOS, Android, and Windows devices.
+        </div>
+      </details>
+
+      <div class="text-center mt-3">
+        <a href="help.html" class="btn btn-outline">Visit help centre <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section cta-section">
+    <div class="container cta-container">
+      <h2 class="section-title">Ready to start watching?</h2>
+      <p class="section-subtitle">Enter your email to begin your 30-day free trial. No card required to start.</p>
+      <form action="signup.html" method="get" class="cta-form">
+        <input type="email" name="email" placeholder="Enter your email address" class="form-control cta-input" required>
+        <button type="submit" class="btn btn-primary">Get started <i class="bi bi-arrow-right"></i></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your destination for movies, series, and exclusive content. Stream any time, on any device.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Website"><i class="bi bi-globe"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse content</h4>
+        <ul>
+          <li><a href="home.html">Home dashboard</a></li>
+          <li><a href="movies.html">Movies catalog</a></li>
+          <li><a href="series.html">TV series</a></li>
+          <li><a href="trending.html">Trending now</a></li>
+          <li><a href="new-releases.html">New releases</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Member account</h4>
+        <ul>
+          <li><a href="profiles.html">Profile switcher</a></li>
+          <li><a href="my-list.html">My saved watchlist</a></li>
+          <li><a href="account.html">Account &amp; billing</a></li>
+          <li><a href="plans.html">Membership plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support &amp; legal</h4>
+        <ul>
+          <li><a href="help.html">Help centre</a></li>
+          <li><a href="login.html">Sign in</a></li>
+          <li><a href="signup.html">Create account</a></li>
+          <li><a href="help.html">Privacy &amp; terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Hero Backdrop Ambient Slideshow Script -->
+  <script>
+    (function() {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-slide-dots .dot');
+      const titleEl = document.getElementById('backdropTitle');
+      const metaEl = document.getElementById('backdropMeta');
+      if (!slides.length) return;
+
+      let currentIndex = 0;
+      const intervalMs = 6500; // 6.5 seconds smooth relaxed rotation
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+        const currentSlide = slides[index];
+        if (titleEl && currentSlide.dataset.title) {
+          titleEl.textContent = currentSlide.dataset.title;
+        }
+        if (metaEl && currentSlide.dataset.year) {
+          metaEl.textContent = `${currentSlide.dataset.year} · ${currentSlide.dataset.genre}`;
+        }
+        const capEl = document.querySelector('#heroSlider .hero-backdrop-caption');
+        if (capEl) {
+          capEl.classList.remove('animate-caption');
+          void capEl.offsetWidth;
+          capEl.classList.add('animate-caption');
+        }
+        currentIndex = index;
+      }
+
+      let timer = setInterval(() => {
+        showSlide((currentIndex + 1) % slides.length);
+      }, intervalMs);
+
+      // Interactive click to switch to any trending backdrop immediately
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          clearInterval(timer);
+          showSlide(i);
+          timer = setInterval(() => {
+            showSlide((currentIndex + 1) % slides.length);
+          }, intervalMs);
+        });
+      });
+    })();
+  </script>
+
+  <script src="backend.js"></script>
+</body>
+</html>

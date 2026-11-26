@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Plans — StreamFlix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html" class="active">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="login.html" class="btn btn-sm btn-outline"><i class="bi bi-box-arrow-in-right"></i> Log In</a>
+          <a href="signup.html" class="btn btn-sm btn-primary"><i class="bi bi-person-plus-fill"></i> Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge badge-accent mb-1"><i class="bi bi-check-circle-fill"></i> Simple &amp; Transparent</span>
+        <h1 class="section-title">Choose the Plan That Fits Your Vision</h1>
+        <p class="section-subtitle">No hidden fees, no lock-in contracts. Upgrade, downgrade, or cancel anytime.</p>
+      </div>
+
+      <!-- 3 Plan Cards -->
+      <div class="grid grid-3 mb-4" style="align-items: center;">
+        
+        <!-- Basic Plan -->
+        <div class="plan-card">
+          <div class="plan-name">Basic</div>
+          <div class="text-muted text-sm mb-2">Essential streaming for solo cinephiles</div>
+          <div class="plan-price">$8.99 <span>/ month</span></div>
+          <ul class="plan-features">
+            <li>Standard HD resolution (720p)</li>
+            <li>Watch on 1 supported screen at a time</li>
+            <li>Ad-free uninterrupted movies &amp; series</li>
+            <li>Download on 1 phone or tablet</li>
+            <li>Stereo 2.0 clean studio sound</li>
+            <li>Access to entire standard catalog</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline" style="width: 100%;"><i class="bi bi-arrow-right"></i> Select Basic</a>
+        </div>
+
+        <!-- Standard Plan (Featured) -->
+        <div class="plan-card featured">
+          <div class="plan-name">Standard</div>
+          <div class="text-muted text-sm mb-2">Perfect for couples and shared households</div>
+          <div class="plan-price">$13.99 <span>/ month</span></div>
+          <ul class="plan-features">
+            <li>Full HD resolution (1080p Crystal Clear)</li>
+            <li>Watch on 2 supported screens at the same time</li>
+            <li>Ad-free unlimited cinema library</li>
+            <li>Download on up to 2 mobile devices</li>
+            <li>Dolby Digital 5.1 Surround Sound</li>
+            <li>First-look access to StreamFlix Originals</li>
+            <li>Parental pin-code security control</li>
+          </ul>
+          <a href="signup.html" class="btn btn-primary" style="width: 100%;"><i class="bi bi-star-fill"></i> Start Standard Trial</a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan-card">
+          <div class="plan-name">Premium</div>
+          <div class="text-muted text-sm mb-2">The ultimate cinema grade showcase</div>
+          <div class="plan-price">$17.99 <span>/ month</span></div>
+          <ul class="plan-features">
+            <li>Ultra HD 4K + HDR10+ &amp; Dolby Vision</li>
+            <li>Watch on 4 supported screens simultaneously</li>
+            <li>Ad-free highest bitrate streaming</li>
+            <li>Download on up to 6 different devices</li>
+            <li>Dolby Atmos Immersive Spatial Audio</li>
+            <li>VIP Early Access to theatrical premieres</li>
+            <li>Dedicated priority customer support</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline" style="width: 100%;"><i class="bi bi-gem"></i> Select Premium</a>
+        </div>
+
+      </div>
+
+      <!-- Full Comparison Table -->
+      <div class="text-center mt-4 mb-2">
+        <h2 class="section-title">Detailed Feature Comparison</h2>
+        <p class="section-subtitle">Inspect side-by-side specifications of all subscription tiers.</p>
+      </div>
+
+      <div class="table-container mb-4">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature Description</th>
+              <th>Basic ($8.99)</th>
+              <th style="color: var(--accent);">Standard ($13.99) <i class="bi bi-star-fill"></i></th>
+              <th>Premium ($17.99)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Monthly Subscription Price</strong></td>
+              <td>$8.99 / mo</td>
+              <td><strong>$13.99 / mo</strong></td>
+              <td>$17.99 / mo</td>
+            </tr>
+            <tr>
+              <td><strong>Max Video Resolution</strong></td>
+              <td>720p HD</td>
+              <td>1080p Full HD</td>
+              <td><strong>4K Ultra HD + HDR10+</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Simultaneous Streaming Screens</strong></td>
+              <td>1 Screen</td>
+              <td>2 Screens</td>
+              <td><strong>4 Screens</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Offline Download Devices</strong></td>
+              <td>1 Device</td>
+              <td>2 Devices</td>
+              <td><strong>6 Devices</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Audio Capabilities</strong></td>
+              <td>Stereo 2.0</td>
+              <td>Dolby Digital 5.1</td>
+              <td><strong>Dolby Atmos Spatial 3D</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Ad-Free Viewing Experience</strong></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Included</span></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Included</span></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Included</span></td>
+            </tr>
+            <tr>
+              <td><strong>StreamFlix Originals Early Premiere</strong></td>
+              <td><span class="cross"><i class="bi bi-x-circle-fill"></i> Not Included</span></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Included</span></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> VIP Priority Access</span></td>
+            </tr>
+            <tr>
+              <td><strong>Individual Family Profiles</strong></td>
+              <td>2 Profiles</td>
+              <td>5 Profiles</td>
+              <td><strong>5 Profiles + Custom Avatars</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Smart TV, Console &amp; Mobile Apps</strong></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Supported</span></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Supported</span></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Supported</span></td>
+            </tr>
+            <tr>
+              <td><strong>Cancel Any Time With 1 Click</strong></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Yes</span></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Yes</span></td>
+              <td><span class="check"><i class="bi bi-check-circle-fill"></i> Yes</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FAQ Accordions -->
+      <div class="card p-4" style="max-width: 900px; margin: 0 auto;">
+        <h3 class="mb-3 text-center">Frequently Asked Subscription Questions</h3>
+        
+        <details>
+          <summary>Can I switch between plans at any time?</summary>
+          <div class="accordion-content">
+            Yes! You can upgrade or downgrade your plan directly in your <a href="account.html" style="color: var(--accent);">Account Settings</a> page. Upgrades take effect immediately, while downgrades reflect at the start of your next billing cycle.
+          </div>
+        </details>
+
+        <details>
+          <summary>Is there any long term contract or cancellation fee?</summary>
+          <div class="accordion-content">
+            None whatsoever. StreamFlix operates purely on a month-to-month basis. You can cancel your subscription anytime with zero penalty or hidden cancellation fee.
+          </div>
+        </details>
+
+        <details>
+          <summary>What payment methods do you accept?</summary>
+          <div class="accordion-content">
+            We accept all major credit and debit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, Google Pay, and prepaid StreamFlix gift cards.
+          </div>
+        </details>
+
+        <details>
+          <summary>How does the 30-day trial work?</summary>
+          <div class="accordion-content">
+            When you register for any plan, you receive 30 days of complimentary access. If you decide StreamFlix isn't right for you, cancel before day 30 and you won't be charged a single cent.
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Website"><i class="bi bi-globe"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="trending.html">Trending Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="signup.html">Register New Account</a></li>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">Billing Inquiries</a></li>
+          <li><a href="help.html">Security &amp; Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved. Neumorphic Front-End Web Technology Project built with HTML5 &amp; CSS3.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>

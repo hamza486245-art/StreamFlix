@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Watching Trailer: Oppenheimer (2023) — StreamFlix Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .trailer-video-box {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-neu);
+      background: #000;
+    }
+    .trailer-video-box iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Stream<span>Flix</span></a>
+      <input type="checkbox" id="hamburger" class="hamburger-toggle">
+      <label for="hamburger" class="hamburger-label" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="trending.html">Trending</a>
+        <a href="new-releases.html">New Releases</a>
+        <a href="plans.html">Plans</a>
+        <a href="my-list.html">My List</a>
+        <div class="nav-auth">
+          <a href="details.html?id=oppenheimer" class="btn btn-sm btn-outline"><i class="bi bi-arrow-left"></i> Back to Movie</a>
+          <a href="profiles.html" class="btn btn-sm btn-primary"><i class="bi bi-people-fill"></i> Switch Profile</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section" style="padding-top: 1.5rem;">
+    <div class="container">
+      
+      <!-- Video Player: Official Movie Trailer Embed -->
+      <div class="trailer-video-box">
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/uYPbbksJxIg?autoplay=1&rel=0&modestbranding=1" 
+          title="Oppenheimer Official Trailer" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Player Info Bar with Bootstrap Icons -->
+      <div class="player-info" style="border-radius: 0 0 var(--radius) var(--radius); margin-bottom: 2rem;">
+        <div class="flex justify-between items-center flex-wrap gap-2">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="badge badge-accent"><i class="bi bi-film"></i> Official Trailer</span>
+              <span class="badge badge-secondary"><i class="bi bi-badge-4k-fill"></i> 4K IMAX</span>
+              <span class="badge badge-tertiary"><i class="bi bi-soundwave"></i> Dolby Atmos</span>
+            </div>
+            <h1 style="font-size: 1.6rem; margin-bottom: 0.2rem;">Oppenheimer (2023) — Official Trailer</h1>
+            <p class="text-sm text-muted">Directed by Christopher Nolan • Starring Cillian Murphy, Robert Downey Jr, Emily Blunt</p>
+          </div>
+
+          <div class="flex gap-2 items-center flex-wrap">
+            <a href="details.html?id=oppenheimer" class="btn btn-sm btn-primary"><i class="bi bi-info-circle"></i> Movie Details</a>
+            <a href="my-list.html" class="btn btn-sm btn-outline"><i class="bi bi-plus-lg"></i> Add to My List</a>
+            <a href="player.html?id=interstellar" class="btn btn-sm btn-secondary"><i class="bi bi-skip-forward-fill"></i> Watch Interstellar Trailer</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-4">
+        <h3 class="mb-2"><i class="bi bi-camera-reels-fill"></i> Experience the Power of Nolan's Masterpiece</h3>
+        <p class="card-text">During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world's first nuclear explosion, forever transforming the course of history.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">Stream<span>Flix</span></div>
+        <p>Your ultimate destination for movies, series, and exclusive content. Stream anytime, anywhere on any device.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Browse Content</h4>
+        <ul>
+          <li><a href="home.html">Home Dashboard</a></li>
+          <li><a href="movies.html">Movies Catalog</a></li>
+          <li><a href="series.html">TV Series</a></li>
+          <li><a href="trending.html">Trending Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account Access</h4>
+        <ul>
+          <li><a href="profiles.html">Profile Switcher</a></li>
+          <li><a href="my-list.html">My Saved Watchlist</a></li>
+          <li><a href="account.html">Account Settings</a></li>
+          <li><a href="plans.html">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="help.html">FAQ</a></li>
+          <li><a href="help.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StreamFlix Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="backend.js"></script>
+</body>
+</html>
